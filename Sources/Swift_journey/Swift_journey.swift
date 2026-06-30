@@ -4,7 +4,7 @@
 @main
 struct Swift_journey {
     static func main() {
-        print("Hey, Its me Easha!")
+        print("Hey, It's me Easha!")
     }
 }
 
