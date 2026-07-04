@@ -52,6 +52,9 @@ if (V1 == V2) {
     print("\(V1) and \(V2) are not Equal")
 }
 
+let a = 2, b = 3
+print("Total: \(a + b)")
+
 var cv1 = "Godzilla"
 var cv2 = 1000.0
 print("Value of \(cv1) is more than \(cv2) millions")
@@ -63,3 +66,16 @@ var vb : Float
 vb = 12.2
 var vc : Double = 12.2
 print("Value of va : \(va)"); print("Value of vb : \(vb)"); print("Value of vc : \(vc)")
+
+let greeting = "Hello"
+var nam = "Swift"
+print(greeting + ", " + nam)
+
+let pi: Double = 3.14
+var count: Int = 3
+print("pi: \(pi), count: \(count)")
+
+let a = 7 , b = 3
+print(a,b) // space separated by default 
+print("a = \(a), b = \(b)") //interpolation
+print(sum = \(a+b)) //inline math
