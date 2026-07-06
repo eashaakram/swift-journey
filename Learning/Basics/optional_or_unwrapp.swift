@@ -29,4 +29,4 @@ var name : String = "Eesha" //without ? means it must contain value
 var nickname : String? = nil
 print(name, nickname ?? "none") //here ?? means if nickname contain value print leftside otherwise print rightside
 nickname = "Sha's"
-print(name, nickname ?? "none")
+print(name, nickname ?? "none") 
