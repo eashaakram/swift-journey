@@ -75,7 +75,7 @@ let pi: Double = 3.14
 var count: Int = 3
 print("pi: \(pi), count: \(count)")
 
-let a = 7 , b = 3
+let a = 7 , b = 2
 print(a,b) // space separated by default 
 print("a = \(a), b = \(b)") //interpolation
 print(sum = \(a+b)) //inline math
