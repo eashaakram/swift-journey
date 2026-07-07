@@ -18,7 +18,7 @@ print("Without force unwrapping: \(mainstr)")  // Optional("Yupp!")
 print("With force unwrapping: \(mainstr!)")  //i Yupp!
 
 if mainstr != nil {
-    print(mainstr!)  // ! unwrapp
+    print(mainstr!)  // ! unwrap
 } else {
     print("mainstr is nil")
 }
