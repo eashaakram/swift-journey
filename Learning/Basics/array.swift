@@ -15,4 +15,4 @@ print("Second method: \(s2)")
 // Array Initialization
 let stars : [String] = ["Sun", "Moon", "Earth"]
 print(stars)
-print("Second star: \(stars[1])") // Moon
+print("Second value: \(stars[1])") // Moon
