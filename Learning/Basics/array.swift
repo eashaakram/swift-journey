@@ -11,3 +11,8 @@ let s1 = name + " is " + String(age) // convert Int to String
 print("First method: \(s1)")
 let s2 = "\(name) is \(age)" 
 print("Second method: \(s2)")
+
+// Array Initialization
+let stars : [String] = ["Sun", "Moon", "Earth"]
+print(stars)
+print("Second star: \(stars[1])") // Moon
