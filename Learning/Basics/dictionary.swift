@@ -1,5 +1,6 @@
 // Key and Values
 let ages = ["Easha" : 20, "Akram" : 50]
+print(ages)
 print(ages["Easha"]) // It print optional value because it is a dictionary it's not sure that the key is present or not
 print("Unwrapping value: \(ages["Easha"]!)") // Unwrapping value using ! operator
 
