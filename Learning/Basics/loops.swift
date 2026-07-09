@@ -17,3 +17,19 @@ let three = stride(from: 2, to: 10, by: 2) // here from means start from 2, to m
 for n in three {
     print(n, terminator: " ")
 }
+print()
+
+// indices
+let name2 = ["Easha", "Akram", "Uzma", "Asfand"]
+for nameindex in name2.indices {
+    if(nameindex < 3){
+        print(name2[nameindex], terminator: " ")
+    }
+}
+print()
+
+// enumerated
+let name3 = ["Easha", "Akram", "Uzma", "Asfand"]
+for (index, name3) in name3.enumerated() {
+        print("\(index ): \(name3)") // It will print index and name in same line
+    }
