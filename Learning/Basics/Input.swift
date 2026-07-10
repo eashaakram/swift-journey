@@ -25,11 +25,10 @@ if mname.isEmpty {
 }
 
 //another method of 3
-if let mname = readLine() {
-    if mname.isEmpty {
-        print("No input")
-    } else {
-        print(mname)
-    }
-
-}
+// if let mname = readLine() {
+//     if mname.isEmpty {
+//         print("No input")
+//     } else {
+//         print(mname)
+//     }
+// }
