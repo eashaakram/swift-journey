@@ -1,3 +1,4 @@
+//calculator  
 var a: Int?
 while a == nil {
     print("Enter first value: ", terminator: "")
