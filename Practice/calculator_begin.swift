@@ -21,12 +21,11 @@ if let input = readLine(){
 }
 }
 } 
-print(=== CALCULATOR MENU ===)
-print("Enter + for addition and - for subtraction)
+print("=== CALCULATOR MENU ===")
+print("Enter + for addition and - for subtraction")
 print("Enter your choice: ", terminator: " ")
-if let operator = readLine() 
-while(true){
-switch operator {
+if let op = readLine() {
+switch op {
 case "+": 
 print("Sum of \(a) and \(b) is \(a+b)")
 
