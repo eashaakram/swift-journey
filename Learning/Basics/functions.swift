@@ -4,9 +4,20 @@
 func backgroundChange() {
     print("Background Color changed")
 }
-
-// Multiple Arguments 
-
-//Program starts here
 print("Calling function without parameters")
 backgroundChange()
+
+// Multiple Arguments 
+func addvalues(value1: Int, value2: Int) -> Int { //here -> Int indicates the return type of the function
+    return value1 + value2
+}
+print("Calling function with parameters")
+let v1 = 10
+let v2 = 20
+let a = addvalues(value1: v1, value2: v2)
+print("Sum of \(v1) and \(v2) is \(a)")
+
+// Another example
+func familyName(name: String, age: String) -> String {
+    return "My name is \(name) and I am \(age) years old"
+}
