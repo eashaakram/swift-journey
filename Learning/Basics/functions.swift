@@ -7,3 +7,6 @@ func backgroundChange() {
 
 // Multiple Arguments 
 
+//Program starts here
+print("Calling function without parameters")
+backgroundChange()
