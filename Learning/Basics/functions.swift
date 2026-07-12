@@ -18,6 +18,8 @@ let a = addvalues(value1: v1, value2: v2)
 print("Sum of \(v1) and \(v2) is \(a)")
 
 // Another example
-func familyName(name: String, age: String) -> String {
+func familyName(name: String, age: Int) -> String {
     return "My name is \(name) and I am \(age) years old"
 }
+let str = familyName(name: "Easha", age: 20)
+print(str)
