@@ -55,17 +55,15 @@
 // print("Sum of \(V1) and \(V2) is \(a)")
 
 // below code will not crash if user enter invalid input
-func addvalues(value1: Int, value2: Int) -> Int {
+func addValues(value1: Int, value2: Int) -> Int {
     return value1 + value2
 }
 // Program
 print("Enter first value:")
-if let input1 = readLine(),
-   let n1 = Int(input1) {
+if let input1 = readLine(), let n1 = Int(input1) {
     print("Enter second value:")
-    if let input2 = readLine(),
-       let n2 = Int(input2) {
-        let sum = addvalues(value1: n1, value2: n2)
+    if let input2 = readLine(), let n2 = Int(input2) {
+        let sum = addValues(value1: n1, value2: n2)
         print("Sum of \(n1) and \(n2) is \(sum)")
     } else {
         print("Invalid second number.")
