@@ -31,3 +31,12 @@ func getLanguages() -> (String, String, String) {
 // Program
 let languages = getLanguages()
 print("Access 3 language: \(languages.2)") // Python
+print("Language1: \(languages.0), Language2: \(languages.1), Languages3: \(languages.2)")
+
+print("Another method")
+func getProgram() -> (language1: String, language2: String) {
+    return ("Swift", "C++")
+}
+//Program
+let program = getProgram()
+print("Language1: \(program.language1), Language2: \(program.language2)")
