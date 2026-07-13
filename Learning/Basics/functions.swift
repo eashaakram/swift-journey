@@ -40,3 +40,16 @@ func getProgram() -> (language1: String, language2: String) {
 //Program
 let program = getProgram()
 print("Language1: \(program.language1), Language2: \(program.language2)")
+
+// Below code will not handle error if user enter string instead of int
+// Function with multiple arguments
+func add_values(Value1: Int, Value2: Int) -> Int {
+    return Value1 + Value2
+}
+// Program
+print("Enter first value:")
+let V1 = Int(readLine()!)!
+print("Enter second value:")
+let V2 = Int(readLine()!)!
+let a = add_values(Value1: V1, Value2: V2)
+print("Sum of \(V1) and \(V2) is \(a)")
