@@ -23,3 +23,11 @@ func familyName(name: String, age: Int) -> String {
 }
 let str = familyName(name: "Easha", age: 20)
 print(str)
+
+// Multiple return values
+func getLanguages() -> (String, String, String) {
+    return ("Swift", "C++", "Python")
+}
+// Program
+let languages = getLanguages()
+print("Access 3 language: \(languages.2)") // Python
