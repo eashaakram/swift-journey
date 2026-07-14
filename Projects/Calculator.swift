@@ -1,3 +1,4 @@
+// Project 1
 // Function to get a valid integer
 func getValidInteger(message: String) -> Int {
     while true {
