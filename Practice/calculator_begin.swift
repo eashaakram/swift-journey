@@ -52,70 +52,38 @@ func getValidInteger(message: String) -> Int {
            let number = Int(input) {
             return number
         } else {
-            print("Invalid number!")
-            print("Please try again.\n")
+            print("Invalid number")
+            print("Try again\n")
         }
     }
 }
 
-// Function to perform calculator operations
+// Function to perform calculator operation
 func calculator(value1: Int, value2: Int) {
+
+    print("\n=== CALCULATOR MENU ===")
+    print("Enter + for Addition")
+    print("Enter - for Subtraction")
 
     while true {
 
-        print("\n===== CALCULATOR MENU =====")
-        print("+  Addition")
-        print("-  Subtraction")
-        print("*  Multiplication")
-        print("/  Division")
-        print("%  Modulus")
-        print("E  Exit")
-
-        print("\nEnter your choice: ", terminator: "")
+        print("Enter your choice: ", terminator: "")
 
         if let op = readLine() {
-
             switch op {
-
             case "+":
                 print("Sum of \(value1) and \(value2) is \(value1 + value2)")
-
+                return
             case "-":
                 print("Subtraction of \(value1) and \(value2) is \(value1 - value2)")
-
-            case "*":
-                print("Multiplication of \(value1) and \(value2) is \(value1 * value2)")
-
-            case "/":
-                if value2 != 0 {
-                    print("Division of \(value1) and \(value2) is \(value1 / value2)")
-                } else {
-                    print("Error! Division by zero is not allowed.")
-                }
-
-            case "%":
-                if value2 != 0 {
-                    print("Modulus of \(value1) and \(value2) is \(value1 % value2)")
-                } else {
-                    print("Error! Modulus by zero is not allowed.")
-                }
-
-            case "E", "e":
-                print("Calculator Closed. Goodbye! ")
                 return
-
             default:
-                print("Invalid choice! Please try again.")
+                print("Invalid choice. Try again.\n")
             }
         }
     }
 }
-
-// ================= Program Starts Here =================
-
-print("===== SIMPLE CALCULATOR =====")
-
+// Program
 let a = getValidInteger(message: "Enter first value: ")
 let b = getValidInteger(message: "Enter second value: ")
-
 calculator(value1: a, value2: b)
