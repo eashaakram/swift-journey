@@ -39,7 +39,7 @@ func calculator(value1: Int, value2: Int) {
                     print("Error! Modulus by zero is not allowed.")
                 }
             case "E", "e":
-                print("Calculator Closed. Goodbye! 👋")
+                print("Calculator Closed. Goodbye! ")
                 return
             default:
                 print("Invalid choice! Please try again.")
