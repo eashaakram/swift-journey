@@ -42,10 +42,10 @@
 // }
 
 
-// Program 
-login()
+// // Program 
+// login()
 
-// Level 2
+// Level 2  (Password must be at least 8 characters long)
 // Get username
 func getUsername() -> String {
     while true {
@@ -91,3 +91,5 @@ func login() {
         }
     }
 }
+// Program 
+login()
