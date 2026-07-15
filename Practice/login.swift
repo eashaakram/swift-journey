@@ -24,3 +24,18 @@ func getPassword() -> Int {
         }
     }
 }
+
+// login part
+func login() {
+    let correctUsername = "easha"
+    let correctPassword = 12345678
+    let username = getUsername()
+    let password = getPassword()
+    if username == correctUsername && password == correctPassword {
+        print("Login Successful!")
+        return
+    } else { 
+        print("Invalid username and password \nEnter again!")
+    }
+}
+
