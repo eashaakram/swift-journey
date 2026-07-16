@@ -1,9 +1,9 @@
 // Signup - Login System
 
 // Signup
-func Username() -> String {
+func createUsername() -> String {
     while true {
-        print("Create Username: ", terminator: " ")
+        print("Create Username:", terminator: " ")
         if let username = readLine() {
             if username.isEmpty {
                 print("Username cannot be empty.\n")
@@ -13,9 +13,9 @@ func Username() -> String {
         }
     }
 }
-func Password() -> String {
+func createPassword() -> String {
     while true {
-        print("Create Password: ", terminator: " ")
+        print("Create Password:", terminator: " ")
         if let password = readLine() {
             if password.isEmpty {
                 print("Password cannot be empty\n")
@@ -27,15 +27,29 @@ func Password() -> String {
         }
     }
 }
+func confirmPassword(originalPassword: String) -> String {
+    while true {
+        print("Confirm Password:", terminator:" ")
+        if let confirmPassword = readLine() {
+            if confirmPassword.isEmpty {
+                print("Confirm Password cannot be empty.\n")
+            } else if confirmPassword != originalPassword {
+                print("Passwords do not match. Please try again.\n")
+            } else {
+                return confirmPassword
+            }
+        }
+    }
+}
 
 func Signup() {
-    let username = Username()
-    let password = Password()
+    let username = createUsername()
+    let password = createPassword()
+    _ = confirmPassword(originalPassword: password) // _ means Return value ko use nahi karna
     print("\n=============================")
     print("Account Created Successfully!")
-    print("\n=============================")
+    print("=============================")
     print("Username: \(username)")
-    print("Password: \(password)")
 }
 
 // Program
