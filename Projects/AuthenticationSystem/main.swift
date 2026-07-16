@@ -7,8 +7,26 @@ func createUsername() -> String {
         if let username = readLine() {
             if username.isEmpty {
                 print("Username cannot be empty.\n")
-            } else {
-                return username 
+            } else if username.count < 3   {
+                print("Username must contain at least 3 characters.\n")
+            } else if username.count > 20 {
+                print("Username cannot be more than 20 characters.\n")
+            } else if username.contains(" ") {
+                print("Username cannot contain spaces.\n")
+            } 
+            else {
+                var isValid = true 
+                for character in username {
+                    if !(character.isLetter || character.isNumber || character == "_") {
+                        isValid = false 
+                        break
+                    }
+                }
+                if isValid {
+                    return username
+                } else {
+                    print("Username can contain letters, numbers, and underscore (_).\n")
+                }
             }
         }
     }
@@ -42,7 +60,7 @@ func confirmPassword(originalPassword: String) -> String {
     }
 }
 
-func Signup() {
+func signup() {
     let username = createUsername()
     let password = createPassword()
     _ = confirmPassword(originalPassword: password) // _ means Return value ko use nahi karna
@@ -53,4 +71,4 @@ func Signup() {
 }
 
 // Program
-Signup()
+signup()
