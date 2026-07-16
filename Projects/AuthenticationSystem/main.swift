@@ -27,3 +27,16 @@ func Password() -> String {
         }
     }
 }
+
+func Signup() {
+    let username = Username()
+    let password = Password()
+    print("\n=============================")
+    print("Account Created Successfully!")
+    print("\n=============================")
+    print("Username: \(username)")
+    print("Password: \(password)")
+}
+
+// Program
+Signup()
