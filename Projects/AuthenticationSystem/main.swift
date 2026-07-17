@@ -1,6 +1,40 @@
 // Signup - Login System
 
-// Signup
+//Full Name
+func createFullName() -> String {
+    while true { 
+        print("Enter Full Name:", terminator:" ")
+        if let fullName = readLine() {
+            if fullName.isEmpty {
+                print("Full Name is requird.\n")
+            } else {
+                return fullName
+            }
+        } 
+   }
+}
+
+// // Email
+// func createEmail() -> String {
+//     ...
+// }
+
+// // Phone Number
+// func createPhoneNumber() -> String {
+//     ...
+// }
+
+// // CNIC
+// func createCNIC() -> String {
+//     ...
+// }
+
+// // Date of Birth
+// func createDateOfBirth() -> String {
+//     ...
+// }
+
+// Username
 func createUsername() -> String {
     while true {
         print("Create Username:", terminator: " ")
@@ -30,6 +64,8 @@ func createUsername() -> String {
         }
     }
 }
+
+// Password
 func createPassword() -> String {
     while true {
         print("Create Password:", terminator: " ")
@@ -69,6 +105,8 @@ func createPassword() -> String {
         }
     }
 }
+
+// Confirm Password
 func confirmPassword(originalPassword: String) -> String {
     while true {
         print("Confirm Password:", terminator:" ")
@@ -84,7 +122,13 @@ func confirmPassword(originalPassword: String) -> String {
     }
 }
 
+// Signup
 func signup() {
+    let fullName = createFullName()
+    // let email = createEmail()
+    // let phoneNumber = createPhoneNumber()
+    // let cnic = createCNIC()
+    // let dateOfBirth = createDateOfBirth()
     let username = createUsername()
     let password = createPassword()
     _ = confirmPassword(originalPassword: password) // _ means Return value ko use nahi karna
