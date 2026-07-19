@@ -33,7 +33,7 @@ func createEmail() -> String {
                 var atCount = 0
                 for character in email {
                     if character == "@" {
-                        atCount +=1
+                        atCount += 1
                     } 
                 } 
                 if atCount != 1 {
