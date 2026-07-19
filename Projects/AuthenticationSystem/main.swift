@@ -6,7 +6,7 @@ func createFullName() -> String {
         print("Enter Full Name:", terminator:" ")
         if let fullName = readLine() {
             if fullName.isEmpty {
-                print("Full Name is requird.\n")
+                print("Full Name is required.\n")
             } else {
                 return fullName
             }
@@ -14,10 +14,37 @@ func createFullName() -> String {
    }
 }
 
-// // Email
-// func createEmail() -> String {
-//     ...
-// }
+// Email
+func createEmail() -> String {
+    while true {
+        print("Enter Email:", terminator: " ")
+        if let email = readLine() {
+            if email.isEmpty {
+                print("Email cannot be empty.\n")
+            } else if email.contains(" ") {
+                print("Email cannot contain spaces.\n")   
+            } else if !email.contains("@") || !email.contains(".") {
+                print("Email must contain both (@) and (.) symbols.\n")
+            } else if email.first == "@" || email.first == "." {
+                print("Email cannot start with (@) or (.)\n")
+            } else if email.last == "@" || email.last == "." {
+                print("Email cannot end with (@) or (.)\n")
+            } else {
+                var atCount = 0
+                for character in email {
+                    if character == "@" {
+                        atCount +=1
+                    } 
+                } 
+                if atCount != 1 {
+                    print("Email must contain exactly one (@)\n")
+                }  else {
+                    return email
+                }
+            }
+        }
+    } 
+}
 
 // // Phone Number
 // func createPhoneNumber() -> String {
@@ -125,18 +152,22 @@ func confirmPassword(originalPassword: String) -> String {
 // Signup
 func signup() {
     let fullName = createFullName()
-    // let email = createEmail()
+    let username = createUsername()
+    let email = createEmail()
     // let phoneNumber = createPhoneNumber()
     // let cnic = createCNIC()
     // let dateOfBirth = createDateOfBirth()
-    let username = createUsername()
     let password = createPassword()
     _ = confirmPassword(originalPassword: password) // _ means Return value ko use nahi karna
     print("\n=============================")
     print("Account Created Successfully!")
     print("=============================")
+
+    print("Full Name: \(fullName)")
     print("Username: \(username)")
-    print("Please login to continue.")
+    print("Email: \(email)")
+    
+    print("\nPlease login to continue.")
 }
 
 // Program
