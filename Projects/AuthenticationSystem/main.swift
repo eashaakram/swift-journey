@@ -1,5 +1,5 @@
 // Signup - Login System
-
+import Foundation
 //Full Name
 func createFullName() -> String {
     while true { 
@@ -50,27 +50,30 @@ func createEmail() -> String {
 func createPhoneNumber() -> String {
     while true {
         print("Enter Phone Number:", terminator: " ")
-        if let phoneNum = readLine() {
+        if let phoneNum = readLine() {  
             if phoneNum.isEmpty {
-                print("Phone Number cannot be emplty.\n")
+                print("Phone Number cannot be empty.\n")
             } else if phoneNum.contains(" ") {
                 print("Phone Number cannot contain spaces.\n")
-            } else if phoneNum.count != 11 {
-                print("Phone Number must contain exactly 11 digits.\n")
-            } else if !phoneNum.starts(with: "03") {
-                print("Phone Number must start with 03.\n")
             } else {
-                var isValid = true 
-                for character in phoneNum {
-                        if !(character.isNumber) {
-                            isValid = false
-                            break
+                let cleanNumber = phoneNum.replacingOccurrences(of: "-", with: "")
+                if cleanNumber.count != 11 {
+                    print("Phone Number must contain exactly 11 digits.\n")
+                    } else if !cleanNumber.starts(with: "03") {
+                    print("Phone Number must start with 03.\n")
+                    } else {
+                        var isValid = true 
+                        for character in cleanNumber {
+                            if !(character.isNumber) {
+                                isValid = false
+                                break
+                            }
                         }
+                        if isValid {
+                            return cleanNumber
+                        } else {
+                        print("Phone Number can only contain Numbers.\n")
                     }
-                if isValid {
-                    return phoneNum
-                } else {
-                    print("Phone Number can only contain Numbers.\n")
                 }
             }
         }        
