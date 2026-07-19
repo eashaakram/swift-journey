@@ -187,7 +187,6 @@ func signup() {
     let index = phoneNumber.index(phoneNumber.startIndex, offsetBy: 4) // startIndex means first position, offsetBy means division
     let firstPart = phoneNumber[..<index] // ..< means index sa pehla wala
     let secondPart = phoneNumber[index...] // ... means index sa laa kar end tk
-    print("Phone Number: \(firstPart)-\(secondPart)")
     
     // let cnic = createCNIC()
     // let dateOfBirth = createDateOfBirth()
@@ -200,6 +199,7 @@ func signup() {
     print("Full Name: \(fullName)")
     print("Username: \(username)")
     print("Email: \(email)")
+    print("Phone Number: \(firstPart)-\(secondPart)")
     
     print("\nPlease login to continue.")
 }
