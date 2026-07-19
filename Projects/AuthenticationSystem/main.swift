@@ -46,10 +46,36 @@ func createEmail() -> String {
     } 
 }
 
-// // Phone Number
-// func createPhoneNumber() -> String {
-//     ...
-// }
+// Phone Number
+func createPhoneNumber() -> String {
+    while true {
+        print("Enter Phone Number:", terminator: " ")
+        if let phoneNum = readLine() {
+            if phoneNum.isEmpty {
+                print("Phone Number cannot be emplty.\n")
+            } else if phoneNum.contains(" ") {
+                print("Phone Number cannot contain spaces.\n")
+            } else if phoneNum.count != 11 {
+                print("Phone Number must contain exactly 11 digits.\n")
+            } else if !phoneNum.starts(with: "03") {
+                print("Phone Number must start with 03.\n")
+            } else {
+                var isValid = true 
+                for character in phoneNum {
+                        if !(character.isNumber) {
+                            isValid = false
+                            break
+                        }
+                    }
+                if isValid {
+                    return phoneNum
+                } else {
+                    print("Phone Number can only contain Numbers.\n")
+                }
+            }
+        }        
+    }
+}
 
 // // CNIC
 // func createCNIC() -> String {
@@ -154,7 +180,12 @@ func signup() {
     let fullName = createFullName()
     let username = createUsername()
     let email = createEmail()
-    // let phoneNumber = createPhoneNumber()
+    let phoneNumber = createPhoneNumber()
+    let index = phoneNumber.index(phoneNumber.startIndex, offsetBy: 4) // startIndex means first position, offsetBy means division
+    let firstPart = phoneNumber[..<index] // ..< means index sa pehla wala
+    let secondPart = phoneNumber[index...] // ... means index sa laa kar end tk
+    print("Phone Number: \(firstPart)-\(secondPart)")
+    
     // let cnic = createCNIC()
     // let dateOfBirth = createDateOfBirth()
     let password = createPassword()
