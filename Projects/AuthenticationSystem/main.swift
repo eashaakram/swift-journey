@@ -80,10 +80,37 @@ func createPhoneNumber() -> String {
     }
 }
 
-// // CNIC
-// func createCNIC() -> String {
-//     ...
-// }
+// CNIC
+func createCNIC() -> String {
+   while true {
+    print("Enter CNIC:", terminator: " ")
+    if let cnic = readLine() {
+        if cnic.isEmpty {
+            print("CNIC cannot be empty.\n")
+        } else if cnic.contains(" ") {
+            print("CNIC cannot contain spaces.\n")
+        } else {
+            let cleanCNIC = cnic.replacingOccurrences(of: "-", with: "")
+            if cleanCNIC.count != 13 {
+                print("CNIC must contain exactly 13 digits.\n")
+            } else {
+                var isValid = true 
+                for character in cleanCNIC {
+                    if !(character.isNumber) {
+                        isValid = false
+                        break
+                    }
+                }
+                if isValid {
+                    return cleanCNIC
+                } else {
+                    print("CNIC can only contain numbers.\n")
+                }
+            }
+        }
+    }
+   } 
+}
 
 // // Date of Birth
 // func createDateOfBirth() -> String {
@@ -181,17 +208,23 @@ func confirmPassword(originalPassword: String) -> String {
 // Signup
 func signup() {
     let fullName = createFullName()
+
     let username = createUsername()
+
     let email = createEmail()
-    let phoneNumber = createPhoneNumber()
+
+    let phoneNumber = createPhoneNumber()  
     let index = phoneNumber.index(phoneNumber.startIndex, offsetBy: 4) // startIndex means first position, offsetBy means division
     let firstPart = phoneNumber[..<index] // ..< means index sa pehla wala
     let secondPart = phoneNumber[index...] // ... means index sa laa kar end tk
     
-    // let cnic = createCNIC()
+    let cnic = createCNIC()
+   
     // let dateOfBirth = createDateOfBirth()
+   
     let password = createPassword()
     _ = confirmPassword(originalPassword: password) // _ means Return value ko use nahi karna
+   
     print("\n=============================")
     print("Account Created Successfully!")
     print("=============================")
