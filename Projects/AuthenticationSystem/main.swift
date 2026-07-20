@@ -272,7 +272,8 @@ func signup() {
     print("Email: \(email)")
     print("Phone Number: \(firstPart)-\(secondPart)")
     print("CNIC: \(firstPart)-\(secondPart)-\(thirdPart)")
-    
+    print("Date of Birth: \(dateOfBirth)")
+
     print("\nPlease login to continue.")
 }
 
