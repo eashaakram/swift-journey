@@ -248,15 +248,15 @@ func signup() {
 
     let phoneNumber = createPhoneNumber()  
     let index = phoneNumber.index(phoneNumber.startIndex, offsetBy: 4) // startIndex means first position, offsetBy means division
-    let phonefirstPart = phoneNumber[..<index] // ..< means index sa pehla wala
-    let phonesecondPart = phoneNumber[index...] // ... means index sa laa kar end tk
+    let phoneFirstPart = phoneNumber[..<index] // ..< means index sa pehla wala
+    let phoneSecondPart = phoneNumber[index...] // ... means index sa laa kar end tk
     
     let cnic = createCNIC()
     let firstIndex = cnic.index(cnic.startIndex, offsetBy: 5)
     let secondIndex = cnic.index(cnic.startIndex, offsetBy: 12)
-    let cnicfirstPart = cnic[..<firstIndex]
-    let cnicsecondPart = cnic[firstIndex..<secondIndex]
-    let cnicthirdPart = cnic[secondIndex...]
+    let cnicFirstPart = cnic[..<firstIndex]
+    let cnicSecondPart = cnic[firstIndex..<secondIndex]
+    let cnicThirdPart = cnic[secondIndex...]
    
     let dateOfBirth = createDateOfBirth()
    
@@ -270,8 +270,8 @@ func signup() {
     print("Full Name: \(fullName)")
     print("Username: \(username)")
     print("Email: \(email)")
-    print("Phone Number: \(firstPart)-\(secondPart)")
-    print("CNIC: \(firstPart)-\(secondPart)-\(thirdPart)")
+    print("Phone Number: \(phoneFirstPart)-\(phoneSecondPart)")
+    print("CNIC: \(cnicFirstPart)-\(cnicSecondPart)-\(cnicThirdPart)")
     print("Date of Birth: \(dateOfBirth)")
 
     print("\nPlease login to continue.")
