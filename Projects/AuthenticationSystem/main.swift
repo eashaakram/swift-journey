@@ -112,10 +112,43 @@ func createCNIC() -> String {
    } 
 }
 
-// // Date of Birth
-// func createDateOfBirth() -> String {
-//     ...
-// }
+// Date of Birth
+func createDateOfBirth() -> String {
+    while true {
+        print("Enter Date of Birth (DD/MM/YYYY):", terminator: " ")
+        if let dob = readLine() {
+            if dob.isEmpty {
+                print("Date of Birth cannot be empty.\n")
+            } else if dob.contains(" ") {
+                print("Date of Birth cannot contain spaces.\n")
+            } else if dob.count != 10 {
+                print("Date of Birth must be in DD/MM/YYYY format.\n")
+            } else {
+                let firstSlash = dob.index(dob.startIndex, offsetBy: 2)
+                let secondSlash = dob.index(dob.startIndex, offsetBy: 5)
+                if dob[firstSlash] != "/" || dob[secondSlash] != "/" {
+                    print("Date of Birth must be in DD/MM/YYYY format.\n")
+                } else {
+                    var isValid = true
+                    for (index, character) in dob.enumerated() {
+                        if index == 2 || index == 5 {
+                            continue
+                        }
+                        if !character.isNumber {
+                            isValid = false
+                            break
+                        }
+                    }
+                    if isValid {
+                        return dob
+                    } else {
+                        print("Date of Birth can only contain numbers and (/).\n")
+                    }
+                }
+            }
+        }
+    }
+}
 
 // Username
 func createUsername() -> String {
@@ -225,7 +258,7 @@ func signup() {
     let cnicsecondPart = cnic[firstIndex..<secondIndex]
     let cnicthirdPart = cnic[secondIndex...]
    
-    // let dateOfBirth = createDateOfBirth()
+    let dateOfBirth = createDateOfBirth()
    
     let password = createPassword()
     _ = confirmPassword(originalPassword: password) // _ means Return value ko use nahi karna
