@@ -42,4 +42,14 @@ for i in 1...5 {
     }
     print(i, terminator: " ")
 }
+print()
 
+// break
+print("Break will stop loop at 2:")
+for i in 1...5 {
+    if i == 3 {
+        break
+    }
+    print(i, terminator: " ")
+}
+print()
