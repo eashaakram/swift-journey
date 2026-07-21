@@ -33,3 +33,13 @@ let name3 = ["Easha", "Akram", "Uzma", "Asfand"]
 for (index, name3) in name3.enumerated() {
         print("\(index ): \(name3)") // It will print index and name in same line
     }
+
+// continue 
+ print("Continue will skip 3:")
+for i in 1...5 {
+    if i == 3 {
+        continue
+    }
+    print(i, terminator: " ")
+}
+
