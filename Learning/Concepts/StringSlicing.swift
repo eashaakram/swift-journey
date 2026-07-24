@@ -167,7 +167,11 @@ print(msg[start]) // output -> H
 let ind = msg.index(msg.startIndex, offsetBy: 3)
 print(msg[ind]) 
 
-// Before index ..<
+// Before index (..<)
 // assume we want Hey! just, not Hey! World complete
 let firstpart = msg[..<ind]
 print(firstpart)
+
+// After index (... means start with index)
+let secondpart = msg[ind...]
+print(secondpart)
