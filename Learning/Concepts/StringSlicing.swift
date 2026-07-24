@@ -155,3 +155,10 @@ Create Index
 Slice String
 
 */
+
+// Practice 
+let msg = "Hello World"
+// String.Index
+let start = msg.startIndex
+print(text[start]) // output -> H
+
