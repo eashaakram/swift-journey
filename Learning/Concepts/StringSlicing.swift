@@ -162,3 +162,7 @@ let msg = "Hello World"
 let start = msg.startIndex
 print(text[start]) // output -> H
 
+// index()
+// assume we want to go on 4th position
+let ind = msg.index(msg.startIndex, offsetBy: 4)
+print(msg[ind]) 
