@@ -157,12 +157,17 @@ Slice String
 */
 
 // Practice 
-let msg = "Hello World"
+let msg = "Hey! World"
 // String.Index
 let start = msg.startIndex
-print(text[start]) // output -> H
+print(msg[start]) // output -> H
 
 // index()
 // assume we want to go on 4th position
-let ind = msg.index(msg.startIndex, offsetBy: 4)
+let ind = msg.index(msg.startIndex, offsetBy: 3)
 print(msg[ind]) 
+
+// Before index ..<
+// assume we want Hey! just, not Hey! World complete
+let firstpart = msg[..<ind]
+print(firstpart)
