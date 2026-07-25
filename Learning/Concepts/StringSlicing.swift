@@ -171,5 +171,11 @@ print("Closed Range (...): \(show)")
 
 // 7- index(before:)
 let lastIndex = text.index(before: text.endIndex) // Last character lene ke liye bahut useful.
-print("Print last index of HeLlo (): \(text[lastIndex])")
+print("Print last index of HeLlo (index(before:)): \(text[lastIndex])")
+
+// 8- index(after:)
+let c = text.startIndex
+let d = text.index(after: c) 
+// Ek index ke baad wala index.
+print("Print 2 character of HeLlo (index(after:)): \(text[d])")
 
