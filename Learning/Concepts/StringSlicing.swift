@@ -179,3 +179,8 @@ let d = text.index(after: c)
 // Ek index ke baad wala index.
 print("Print 2 character of HeLlo (index(after:)): \(text[d])")
 
+// 9- 11. Negative Direction
+let last = text.index(before: text.endIndex)
+let previous = text.index(before: last)
+// Peeche move karna.
+print("Print second last character of HeLlo (Negative Direction): \(text[previous])")
