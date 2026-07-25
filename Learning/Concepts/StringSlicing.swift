@@ -158,13 +158,13 @@ let secondPart = text[index...] // Index include hota hai.
 print("Print letters after first 2 letters of HeLlo (... From Index): \(secondPart)")
 
 // 5- Between Two Indexes
-let first = text.index(text.startIndex, offsetBy: 1)
+let first = text.index(text.startIndex, offsetBy: 0)
 let second = text.index(text.startIndex, offsetBy: 4)
 let part = text[first..<second]
-print("Between Two Indexes: \(part)") // Indexes include ni hotay.
+print("Between Two Indexes: \(part)") // Index include ni hotay.
 
 // 6- Closed Range (...)
-let a = text.index(text.startIndex, offsetBy: 1)
-let b = text.index(text.startIndex, offsetBy: 3)
+let a = text.index(text.startIndex, offsetBy: 0)
+let b = text.index(text.startIndex, offsetBy: 4)
 let show = text[a...b] // Agar dono indexes include karne hon.
 print("Closed Range (...): \(show)")
