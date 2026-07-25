@@ -168,3 +168,8 @@ let a = text.index(text.startIndex, offsetBy: 0)
 let b = text.index(text.startIndex, offsetBy: 4)
 let show = text[a...b] // Agar dono indexes include karne hon.
 print("Closed Range (...): \(show)")
+
+// 7- index(before:)
+let lastIndex = text.index(before: text.endIndex) // Last character lene ke liye bahut useful.
+print("Print last index of HeLlo (): \(text[lastIndex])")
+
