@@ -156,3 +156,9 @@ print("Print first 2 letters of HeLlo (..< Before Index): \(firstPart)")
 // 4- ... From Index
 let secondPart = text[index...] // Index include hota hai.
 print("Print letters after first 2 letters of HeLlo (... From Index): \(secondPart)")
+
+// 5- Between Two Indexes
+let first = text.index(text.startIndex, offsetBy: 1)
+let second = text.index(text.startIndex, offsetBy: 4)
+let part = text[first..<second]
+print("Between Two Indexes: \(part)") // Indexes include ni hotay.
