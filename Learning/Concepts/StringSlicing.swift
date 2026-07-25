@@ -141,6 +141,10 @@
 
 // Notes
 // 1- startIndex
-let text = "Hello"
+let text = "HeLlo"
 let start = text.startIndex
 print("Start Index of Hello: \(text[start])")
+
+// 2- index(_:offsetBy:)
+let index = text.index(text.startIndex, offsetBy: 2)
+print("Print third letter of HeLlo: \(text[index])")
