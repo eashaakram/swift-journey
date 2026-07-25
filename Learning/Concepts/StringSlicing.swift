@@ -143,12 +143,16 @@
 // 1- startIndex
 let text = "HeLlo"
 let start = text.startIndex // String ka pehla index.
-print("Start Index of Hello: \(text[start])")
+print("Start Index of Hello (startIndex): \(text[start])")
 
 // 2- index(_:offsetBy:)
 let index = text.index(text.startIndex, offsetBy: 2) // Kisi index se aage ya peeche move karna.
-print("Print third letter of HeLlo: \(text[index])")
+print("Print third letter of HeLlo (index(_:offsetBy:)): \(text[index])")
 
 // 3- ..< Before Index
 let firstPart = text[..<index] // Index include nahi hota.
-print("Print first 2 letters of HeLlo: \(firstPart)")
+print("Print first 2 letters of HeLlo (..< Before Index): \(firstPart)")
+
+// 4- ... From Index
+let secondPart = text[index...] // Index include hota hai.
+print("Print letters after first 2 letters of HeLlo (... From Index): \(secondPart)")
