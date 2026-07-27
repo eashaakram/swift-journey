@@ -16,3 +16,15 @@ print(greeting)
  that goes to 
  multiple liners!
 */
+
+
+// Naming Conventions
+
+// Camel Case - CORRECT!
+// The first word is lowercased and then the first character in every following word is uppercased.
+let firstGreeting = "Hello, World!"
+let thisIsMyFirstGreeting = "Hello, World!" // This is Camel Case
+
+let thisismysecondgreeting = "Hello, World!" // This is also not wrong variable but this is hard to raed
+
+
