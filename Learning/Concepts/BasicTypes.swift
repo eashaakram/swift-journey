@@ -25,3 +25,12 @@ print("First: \(myFirstDate)")
 let mySecondDate: Date = .now
 print("Second: \(mySecondDate)")
 
+// Number can be Int, Double, CGFloat & more
+
+let myFirstNumber: Int = 1 // Int is whole number
+let mySecondNumber: Double = 1.0
+let myThirdNumber: Float = 1.0
+
+// CGFloat for UI
+
+
