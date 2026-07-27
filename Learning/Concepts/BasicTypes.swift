@@ -18,3 +18,10 @@ let myFifthItem: Bool = true
 let mySixthItem: String = "Hello, world!"
 let mySeventhItem = true
 
+// Date
+let myFirstDate: Date = Date()
+print("First: \(myFirstDate)")
+// More easier
+let mySecondDate: Date = .now
+print("Second: \(mySecondDate)")
+
