@@ -96,3 +96,14 @@ if likeCount > 3 && (commentCount > 0 || viewCount > 50) {
 if likeCount > 5 || userIsPremium {
     print("Likes are greater than 5 and user is premium.")
 }
+
+// if-elif
+if likeCount > 5 {
+    print("Like count > 5")
+} else if likeCount > 2 {
+    print("Like count > 2")
+} else if userIsPremium {
+    print("User is premium.")
+} else {
+    print("Else statement")
+}
