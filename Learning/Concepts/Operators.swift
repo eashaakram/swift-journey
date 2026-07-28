@@ -73,3 +73,26 @@ if likeCount > 3 || commentCount > 0 {
 } else {
     print("Post has 3 or less likes or post has 0 or less comments.")
 }
+
+// Examples
+
+var userIsPremium: Bool = true
+var userIsNew: Bool = false
+
+// if userIsPremium == true && userIsNew == true
+// (Another method to write this true condition)
+if userIsPremium && userIsNew {
+
+}
+
+if likeCount > 3 && commentCount > 0 || viewCount > 50 {
+    print("1-EXECUTE")
+}
+
+if likeCount > 3 && (commentCount > 0 || viewCount > 50) {
+    print("2-EXECUTE")
+}
+
+if likeCount > 5 || userIsPremium {
+    print("Likes are greater than 5 and user is premium.")
+}
