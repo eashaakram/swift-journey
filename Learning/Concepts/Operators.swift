@@ -1,6 +1,6 @@
 import Foundation
 
-var likeCount: Double = 4
+var likeCount: Double = 5
 var commentCount: Double = 0
 var viewCount: Double = 100
 
@@ -23,4 +23,12 @@ print("Multiply: \(likeCount)")
 // Division
 // likeCount = likeCount / 2
 likeCount /= 2
-print("Divide: \(likeCount)")
+// print("Divide: \(likeCount)")
+
+// Order of operations does matter!
+// PEMDAS
+// likeCount = likeCount - 1 * 2.0
+print(likeCount)
+// Use parenthesis
+likeCount = (likeCount - 1) * 2.0
+print("Parenthesis: \(likeCount)")
