@@ -110,3 +110,33 @@ myNumber = 458
 print(myNumber)
 
 
+// if statements
+
+var userIsPremium: Bool = false 
+
+if userIsPremium == true {
+    print("1 - user is premium")
+}
+
+// you can also write if statement like that
+// It will run when userIsPremium is true
+if userIsPremium {  
+    print("2 - user is premium")
+}
+
+// if false
+if userIsPremium == false {  
+    print("3 - user is premium")
+}
+
+if !userIsPremium {
+    print("4 - user is NOT premium")
+}
+
+
+// if-else
+if userIsPremium == true {
+    print("1 - user is premium")
+} else {
+    print("1.1 - user is NOT premium")
+}
