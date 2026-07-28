@@ -66,3 +66,10 @@ if likeCount > 3 && commentCount > 0 {
 } else {
     print("Post has 3 or less likes or post has 0 or less comments.")
 }
+
+// OR Operator (Atleast one statement must be true)
+if likeCount > 3 || commentCount > 0 {
+    print("Post has greater than 3 likes and greater than 0 comments.")
+} else {
+    print("Post has 3 or less likes or post has 0 or less comments.")
+}
