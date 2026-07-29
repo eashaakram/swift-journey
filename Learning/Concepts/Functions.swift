@@ -146,7 +146,7 @@ let name: String = returnUserName()
 var userDidCompleteOnBoarding: Bool = false 
 var userProfileIsCreated: Bool = true
 
-func checkUseStatus() -> Bool {
+func checkUserStatus() -> Bool {
     if userDidCompleteOnBoarding && userProfileIsCreated {
         return true
     } else {
@@ -155,3 +155,23 @@ func checkUseStatus() -> Bool {
 }
 
 // parenthesis
+
+func showFirstScreen() {
+    var userDidCompleteOnboarding = false
+    var userProfileIscreated = true
+    var status = checkUserstatus(didCompleteOnBoarding: userDidCompleteOnboarding, profileIsCreated: userProfileIscreated)
+
+    if status == true {
+        print("SHOW HOME SCREEN")
+    } else {
+        print("SHOW ONBOARDING SCREEN")
+    }
+}
+
+func checkUserstatus (didCompleteOnBoarding: Bool, profileIsCreated: Bool) -> Bool {
+    if didCompleteOnBoarding && profileIsCreated {
+        return true 
+    } else {
+        return false
+    }
+}
