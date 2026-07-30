@@ -143,23 +143,24 @@ let name: String = returnUserName()
 // ------------------------------------------------------------------------------------
 
 
-var userDidCompleteOnBoarding: Bool = false 
-var userProfileIsCreated: Bool = true
+// var userDidCompleteOnBoarding: Bool = false 
+// var userProfileIsCreated: Bool = true
 
-func checkUserStatus() -> Bool {
-    if userDidCompleteOnBoarding && userProfileIsCreated {
-        return true
-    } else {
-        return false
-    }
-}
+// func checkUserStatus() -> Bool {
+//     if userDidCompleteOnBoarding && userProfileIsCreated {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
 
 // parenthesis
 
+showFirstScreen()
 func showFirstScreen() {
     var userDidCompleteOnboarding = false
     var userProfileIscreated = true
-    var status = checkUserstatus(didCompleteOnBoarding: userDidCompleteOnboarding, profileIsCreated: userProfileIscreated)
+    let status = checkUserstatus(didCompleteOnBoarding: userDidCompleteOnboarding, profileIsCreated: userProfileIscreated)
 
     if status == true {
         print("SHOW HOME SCREEN")
@@ -173,5 +174,42 @@ func checkUserstatus (didCompleteOnBoarding: Bool, profileIsCreated: Bool) -> Bo
         return true 
     } else {
         return false
+    }
+}
+
+
+// ------------------------------------------------------------------------------------
+
+doSomething()
+doSomethingelse()
+
+func doSomething() -> Void {
+   // print("EXECUTE-1")
+   var isNew: Bool = false
+
+   if isNew {
+    print("NEW")
+   } else {
+    print("NOT NEW")
+   }
+}
+
+func doSomethingelse() -> String {
+ 
+   var isNew: Bool = false
+
+   if isNew {
+    return "NEW"
+   } 
+    return "FALSE"
+}
+
+func doMoreSomething() -> String {
+    var title: String = "Avengers"
+
+    if title = "Avengers" {
+        return "Marvel"
+    } else {
+    return "Not Marvel"
     }
 }
