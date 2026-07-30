@@ -207,9 +207,48 @@ func doSomethingelse() -> String {
 func doMoreSomething() -> String {
     var title: String = "Avengers"
 
-    if title = "Avengers" {
+    // *If title is equal to Avengers
+    if title == "Avengers" {
         return "Marvel"
     } else {
     return "Not Marvel"
     }
+}
+
+// Guard
+doSomethingElse()
+
+func doSomethingElse() {
+    var title: String = "Avengers"
+
+    // Make sure title == Avengers
+    guard title == "Avengers" else {
+        print("Not Marvel")
+        return
+    }
+    print("Marvel")
+}
+
+checkIfTitleIsAvengers()
+
+func checkIfTitleIsAvengers() -> Bool {
+    var title: String = "Avengers"
+
+    // Make sure title == Avengers
+    guard title == "Avengers" else {
+        return false
+    }
+    return true
+}
+
+checkIfTitleIsAvengers2()
+
+func checkIfTitleIsAvengers2() -> Bool {
+    var title: String = "Avengers"
+
+    // If title == Avengers
+    if title == "Avengers" {
+        return true
+    }
+    return false
 }
