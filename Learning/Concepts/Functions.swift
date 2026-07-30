@@ -281,3 +281,5 @@ func calculateNumbers(valuer1: Int, value2: Int) -> Int {
 let result1 = calculateNumbers()
 let result2 = calculateNumbers(valuer1: number1, value2: number2)
 
+print("Method 1: \(result1)")
+print("Method 2: \(result2)")
