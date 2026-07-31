@@ -275,7 +275,7 @@ func calculateNumbers() -> Int {
 // }
 
 func calculateNumbers(value1: Int, value2: Int) -> Int {
-    return number1 + number2
+    return value1 + value2
 }
 
 let result1 = calculateNumbers()
