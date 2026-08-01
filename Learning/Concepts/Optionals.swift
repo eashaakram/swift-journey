@@ -39,13 +39,37 @@ let myBool: Bool = false
 
 // We don't know if there is a value, but if there is, it is a Boolean
 var myOtherBool: Bool? = nil
-print(myOtherBool)
+
+// print(myOtherBool)
+// myOtherBool = true
+// print(myOtherBool)
+// myOtherBool = false
+// print(myOtherBool)
+// myOtherBool = nil
+// print(myOtherBool)
+
+// nil coalescing operator
+
+let newValue: Bool? = myOtherBool 
+
+// The value of myOtherBool (if there is one) will be assigned to newValue2, otherwise newValue2 will be assigned false
+let newValue2: Bool = myOtherBool ?? false // (if myOtherBool is nil then it will use default value false)
+print("newValue2: \(newValue2.description)")
 
 myOtherBool = true
-print(myOtherBool)
+let newValue3 = myOtherBool ?? false
+print("newValue3: \(newValue3.description)")
 
-myOtherBool = false
-print(myOtherBool)
 
-myOtherBool = nil
-print(myOtherBool)
+// Another example
+var myString: String? = nil
+let newString = myString ?? "some default Value"
+print("newString: \(newString)")
+
+myString = "Hello, world!"
+print(myString ?? "There is no value!") 
+
+myString = "New text!"
+print(myString ?? "There is no value!") 
+myString = nil
+print(myString ?? "There is no value!") 
