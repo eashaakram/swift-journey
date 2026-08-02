@@ -1,4 +1,9 @@
 import Foundation
+
+// Notes
+// Three ways to unwrap optionals: nil coalescing (give default value), if-let, guard-let
+
+
 // Optional
 // Use ? to declare values that maybe nil.
 // var aa : Int?
@@ -100,6 +105,7 @@ print("Check user is premium(2): \(isPremium2)")
 
 
 // If-let
+// When If-let is successful, enter the closure
 isPremium = true
 print("User premium updated: \(userIsPremium)")
 
@@ -126,6 +132,7 @@ func checkIfUserIsPremium4() -> Bool {
 
 func checkIfUserIsPremium5() -> Bool {
     if let newValue = userIsPremium {
+    // Here we have access to the non -optional value 
         return userIsPremium
     }
         return false
@@ -134,4 +141,25 @@ func checkIfUserIsPremium5() -> Bool {
 
 // ----------------------------------------------------------------
 
-// Guard
+// Guard-let
+// When a guard is a failure, enter the closure
+func checkIfUserIsPremium6() -> Bool {
+    // Make sure there is a value (guard is a check)
+    // If there is a value in userIsPremium then newValue is equal to that value and the code after the guard statement will execute.
+    // If there is no value in userIsPremium then the else block will execute and the function will return false.
+    guard let newValue = userIsPremium else {
+        return false
+    }
+
+    // Here we have access to the non -optional value 
+    return newValue
+}
+
+// another syntax (less code)
+
+func checkIfUserIsPremium7() -> Bool {
+    guard let userIsPremium else {
+        return false
+    }
+    return userIsPremium
+}
