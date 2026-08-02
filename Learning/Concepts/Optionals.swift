@@ -78,13 +78,14 @@ print(myString ?? "There is no value!")
 // ----------------------------------------------------------------
 
 var userIsPremium: Bool? = nil 
+print("User premium: \(userIsPremium)")
 
 func checkIfUserIsPremium() -> Bool? {
     userIsPremium  // when you have only one line of code in function then func knows its a return value in swift
 }
 
 let isPremium = checkIfUserIsPremium()
-print("Check user is premiun(1): \(isPremium)")
+print("Check user is premium(1): \(isPremium)")
 
 
 func checkIfUserIsPremium2() -> Bool {
@@ -92,6 +93,19 @@ func checkIfUserIsPremium2() -> Bool {
 }
 
 let isPremium2 = checkIfUserIsPremium2()
-print("Check user is premiun(2): \(isPremium2)")
+print("Check user is premium(2): \(isPremium2)")
 
 
+// If-let
+
+func checkIfUserIsPremium3() -> Bool {
+    // If there is a value in userIsPremium, assign it to newValue and execute the code in the block.
+    if let newValue = userIsPremium {
+        // Here we have access to the non-optional value 
+        return newValue // unwrapped value
+    } else {
+        return false
+    }
+}
+
+print("Check user is premium(3): \(checkIfUserIsPremium3())")
