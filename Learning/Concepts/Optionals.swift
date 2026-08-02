@@ -76,3 +76,22 @@ print(myString ?? "There is no value!")
 
 
 // ----------------------------------------------------------------
+
+var userIsPremium: Bool? = nil 
+
+func checkIfUserIsPremium() -> Bool? {
+    userIsPremium  // when you have only one line of code in function then func knows its a return value in swift
+}
+
+let isPremium = checkIfUserIsPremium()
+print("Check user is premiun(1): \(isPremium)")
+
+
+func checkIfUserIsPremium2() -> Bool {
+   return userIsPremium ?? false
+}
+
+let isPremium2 = checkIfUserIsPremium2()
+print("Check user is premiun(2): \(isPremium2)")
+
+
