@@ -96,7 +96,12 @@ let isPremium2 = checkIfUserIsPremium2()
 print("Check user is premium(2): \(isPremium2)")
 
 
+// ----------------------------------------------------------------
+
+
 // If-let
+isPremium = true
+print("User premium updated: \(userIsPremium)")
 
 func checkIfUserIsPremium3() -> Bool {
     // If there is a value in userIsPremium, assign it to newValue and execute the code in the block.
@@ -109,3 +114,24 @@ func checkIfUserIsPremium3() -> Bool {
 }
 
 print("Check user is premium(3): \(checkIfUserIsPremium3())")
+
+func checkIfUserIsPremium4() -> Bool {
+    if let newValue = userIsPremium {
+        return newValue 
+    }
+        return false
+}
+
+// new syntax (less code)
+
+func checkIfUserIsPremium5() -> Bool {
+    if let newValue = userIsPremium {
+        return userIsPremium
+    }
+        return false
+}
+
+
+// ----------------------------------------------------------------
+
+// Guard
