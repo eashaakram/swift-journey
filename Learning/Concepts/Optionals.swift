@@ -279,4 +279,30 @@ func checkIfUserIsSetUp4() -> Bool {
                     )   
     }
   
-   
+
+
+
+// Optional chaining
+// Optional chaining is a process for querying and calling properties, methods, and subscripts on an
+
+func getUsername() -> String? {
+    return "test"
+}
+
+func getTitle() -> String {
+    return "title"
+}
+
+func getUserData() {
+    let username: String? = getUsername()
+    // "I will get the count if username is not nil"
+    let count = username?.count
+
+    let title: String = getTitle()
+    // "I will get the count if title is not nil"
+    let count2 = title.count
+
+    // If username has a value, and first character in username has a value, then check if first character is lowercased and return true or false. 
+    let firstCharacterIsLowercased = username?.first?.isLowercase ?? false
+    print("firstCharacterIsLowercased: \(firstCharacterIsLowercased)")
+}
