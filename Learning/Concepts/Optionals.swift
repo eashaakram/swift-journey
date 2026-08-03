@@ -237,6 +237,27 @@ func checkIfUserIsSetUp3() -> Bool {
     }
 }    
     
-    
-    
-    
+
+// Layered guard-let (Nested guard-let)
+func checkIfUserIsSetUp4() -> Bool {
+    guard let userIsNew else {
+        return false
+    }
+    // userIsNew == Bool
+    guard let userDidCompleteOnBoarding else {
+        return false
+    } 
+    // userDidCompleteOnBoarding == Bool
+    guard let userFavouriteMovie else {
+        return false
+    } 
+    // userFavouriteMovie == String
+        
+    return getUserStatus(
+                    userIsNew: userIsNew,
+                    userDidCompleteOnBoarding: userDidCompleteOnBoarding, 
+                    userFavouriteMovie: userFavouriteMovie
+                    )   
+    }
+  
+   
