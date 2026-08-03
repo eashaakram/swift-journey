@@ -304,5 +304,18 @@ func getUserData() {
 
     // If username has a value, and first character in username has a value, then check if first character is lowercased and return true or false. 
     let firstCharacterIsLowercased = username?.first?.isLowercase ?? false
+
+    // "I will get the count because I know 100% that username is not nil, but if it is nil, the app will crash"
+    let count3: Int = username!.count // force unwrapping, will crash if username is nil
+
     print("firstCharacterIsLowercased: \(firstCharacterIsLowercased)")
 }
+
+// Safely Unwrap an optional Methods
+// nil coalescing operator (??) - provides a default value if the optional is nil
+// if-let - unwraps the optional and executes code if it has a value
+// guard-let - unwraps the optional and exits the current scope if it is nil
+
+// unsafely unwrap an optional Method
+// force unwrapping (!) - unwraps the optional and crashes if it is nil
+// explicitly unwrapped optional (!) - unwraps the optional and crashes if it is nil
