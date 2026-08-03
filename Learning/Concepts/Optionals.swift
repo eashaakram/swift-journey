@@ -260,4 +260,23 @@ func checkIfUserIsSetUp4() -> Bool {
                     )   
     }
   
+// Without comments
+func checkIfUserIsSetUp4() -> Bool {
+    guard let userIsNew else {
+        return false
+    }
+    guard let userDidCompleteOnBoarding else {
+        return false
+    } 
+    guard let userFavouriteMovie else {
+        return false
+    } 
+        
+    return getUserStatus(
+                    userIsNew: userIsNew,
+                    userDidCompleteOnBoarding: userDidCompleteOnBoarding, 
+                    userFavouriteMovie: userFavouriteMovie
+                    )   
+    }
+  
    
