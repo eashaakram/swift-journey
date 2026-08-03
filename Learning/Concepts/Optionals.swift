@@ -205,3 +205,38 @@ func getUserStatus(userIsNew: Bool, userDidCompleteOnBoarding: Bool, userFavouri
     }
     return false
 }
+
+// layered if-let (Nested if-let)
+func checkIfUserIsSetUp3() -> Bool {
+    if let userIsNew {
+        // userIsNew == Bool
+
+        if let userDidCompleteOnBoarding {
+            // userDidCompleteOnBoarding == Bool
+
+            if let userFavouriteMovie {
+                // userFavouriteMovie == String
+                return getUserStatus(
+                    userIsNew: userIsNew,
+                    userDidCompleteOnBoarding: userDidCompleteOnBoarding, 
+                    userFavouriteMovie: userFavouriteMovie
+                    )
+            } else {
+                // userFavouriteMovie == nil
+                return false
+            }
+
+        } else {
+            // userDidCompleteOnBoarding == nil
+            return false
+        } 
+
+    } else {
+        // userIsNew == nil
+        return false
+    }
+}    
+    
+    
+    
+    
