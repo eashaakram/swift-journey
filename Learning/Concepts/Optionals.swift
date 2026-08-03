@@ -170,18 +170,33 @@ var userIsNew: Bool? = true
 var userDidCompleteOnBoarding: Bool? = false
 var userFavouriteMovie: String? = nil
 
-func checkIfUserISSetUp() -> Bool {
+func checkIfUserIsSetUp() -> Bool {
     if let userIsNew, let userDidCompleteOnBoarding, let userFavouriteMovie {
         // userIsNew == Bool AND 
         // userDidCompleteOnBoarding == Bool AND
         // userFavouriteMovie == String
-        return getUserStatus(userIsNew: userIsNew, userDidCompleteOnBoarding: userDidCompleteOnBoarding, userFavouriteMovie: userFavouriteMovie)
+        return getUserStatus(
+            userIsNew: userIsNew,
+            userDidCompleteOnBoarding: userDidCompleteOnBoarding, 
+            userFavouriteMovie: userFavouriteMovie
+            )
     } else {
         // userIsNew == nil OR
         // userDidCompleteOnBoarding == nil OR  
         // userFavouriteMovie == nil
         return false
     }
+}
+
+func checkIfUserIsSetUp2() -> Bool {
+    guard let userIsNew, let userDidCompleteOnBoarding, let userFavouriteMovie else {
+        return false
+    }
+    return getUserStatus(
+        userIsNew: userIsNew,
+        userDidCompleteOnBoarding: userDidCompleteOnBoarding, 
+        userFavouriteMovie: userFavouriteMovie
+        )
 }
 
 func getUserStatus(userIsNew: Bool, userDidCompleteOnBoarding: Bool, userFavouriteMovie: String) -> Bool {
