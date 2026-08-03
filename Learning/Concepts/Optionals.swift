@@ -163,3 +163,27 @@ func checkIfUserIsPremium7() -> Bool {
     }
     return userIsPremium
 }
+
+// ----------------------------------------------------------------
+
+var userIsNew: Bool? = true
+var userDidCompleteOnBoarding: Bool? = false
+var userFavouriteMovie: String? = nil
+
+func checkIfUserISSetUp() {
+    if let userIsNew, let userDidCompleteOnBoarding, let userFavouriteMovie {
+        // userIsNew == Bool AND 
+        // userDidCompleteOnBoarding == Bool AND
+        // userFavouriteMovie == String
+        return getUserStatus(userIsNew: userIsNew, userDidCompleteOnBoarding: userDidCompleteOnBoarding, userFavouriteMovie: userFavouriteMovie)
+    } else {
+        return false
+    }
+}
+
+func getUserStatus(userIsNew: Bool, userDidCompleteOnBoarding: Bool, userFavouriteMovie: String) -> Bool {
+    if userIsNew && userDidCompleteOnBoarding {
+        return true
+    }
+    return false
+}
