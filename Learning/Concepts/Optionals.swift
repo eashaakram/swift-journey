@@ -89,7 +89,7 @@ func checkIfUserIsPremium() -> Bool? {
     userIsPremium  // when you have only one line of code in function then func knows its a return value in swift
 }
 
-let isPremium = checkIfUserIsPremium()
+var isPremium = checkIfUserIsPremium()
 print("Check user is premium(1): \(isPremium)")
 
 
@@ -106,8 +106,8 @@ print("Check user is premium(2): \(isPremium2)")
 
 // If-let
 // When If-let is successful, enter the closure
-isPremium = true
-print("User premium updated: \(userIsPremium)")
+userIsPremium = true
+print("User premium updated: \(userIsPremium ?? false)")
 
 func checkIfUserIsPremium3() -> Bool {
     // If there is a value in userIsPremium, assign it to newValue and execute the code in the block.
@@ -133,7 +133,7 @@ func checkIfUserIsPremium4() -> Bool {
 func checkIfUserIsPremium5() -> Bool {
     if let newValue = userIsPremium {
     // Here we have access to the non -optional value 
-        return userIsPremium
+        return newValue
     }
         return false
 }
@@ -261,7 +261,7 @@ func checkIfUserIsSetUp4() -> Bool {
     }
   
 // Without comments
-func checkIfUserIsSetUp4() -> Bool {
+func checkIfUserIsSetUp5() -> Bool {
     guard let userIsNew else {
         return false
     }
@@ -283,7 +283,6 @@ func checkIfUserIsSetUp4() -> Bool {
 
 
 // Optional chaining
-// Optional chaining is a process for querying and calling properties, methods, and subscripts on an
 
 func getUsername() -> String? {
     return "test"
@@ -293,18 +292,22 @@ func getTitle() -> String {
     return "title"
 }
 
+getUserData()
+
 func getUserData() {
     let username: String? = getUsername()
     // "I will get the count if username is not nil"
     let count = username?.count
 
     let title: String = getTitle()
-    // "I will get the count if title is not nil"
+    // "I will get the count always"
     let count2 = title.count
 
     // If username has a value, and first character in username has a value, then check if first character is lowercased and return true or false. 
     let firstCharacterIsLowercased = username?.first?.isLowercase ?? false
 
+
+    // Unsafely unwrapping an optional
     // "I will get the count because I know 100% that username is not nil, but if it is nil, the app will crash"
     let count3: Int = username!.count // force unwrapping, will crash if username is nil
 
