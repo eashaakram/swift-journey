@@ -1,3 +1,5 @@
+import Foundation
+
 /* Tuples are not collection but simply multiple variables that can be 
 that can be passed around with a single identifier*/
 let fullName = ("Easha", "Akram")
@@ -16,3 +18,43 @@ print("First name (ignore second by using underscore): \(first1)")
 
 let (f1, _, f3) = ("Easha", "Akram", "Uzma")
 print("First name: \(f1)"); print("Third name: \(f3)")
+
+
+// Tuple with Function
+// A function can return multiple values by using a tuple as the return type
+
+var userName: String = "Hello"
+var userIsPremium: Bool = false
+var userIsNew: Bool = true
+
+func getUserName() -> String {
+    userName
+}
+
+func getUserIsPremium() -> Bool {
+    userIsPremium
+}
+
+
+// limited to 1 return typle
+func getUserInfo() -> String {
+    let name = getUserName()
+    let isPremium = getUserIsPremium()
+
+    // do something
+    return name
+}
+
+
+// Tuples can combine multiple pieces of data
+funcgetUserInfo2() -> (String, Bool) {
+    let name = getUserName()
+    let isPremium = getUserIsPremium()
+
+    return(name, isPremium)
+}
+
+
+var userData: String = userName
+var userData2: (String, Bool, Bool) = (userName, userIsPremium, userIsNew)
+
