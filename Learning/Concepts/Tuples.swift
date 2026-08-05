@@ -47,7 +47,7 @@ func getUserInfo() -> String {
 
 
 // Tuples can combine multiple pieces of data
-funcgetUserInfo2() -> (String, Bool) {
+func getUserInfo2() -> (String, Bool) {
     let name = getUserName()
     let isPremium = getUserIsPremium()
 
@@ -58,3 +58,18 @@ funcgetUserInfo2() -> (String, Bool) {
 var userData: String = userName
 var userData2: (String, Bool, Bool) = (userName, userIsPremium, userIsNew)
 
+let info1 = getUserInfo2()
+let name1 = info1.0
+// let name = userData2.2
+
+
+// Adding parameters names
+func getUserInfo3() -> (name: String, isPremium: Bool) {
+    let name = getUserName()
+    let isPremium = getUserIsPremium()
+
+    return(name, isPremium)
+}
+
+let info2 = getUserInfo3()
+let name2 = info2.isPremium
