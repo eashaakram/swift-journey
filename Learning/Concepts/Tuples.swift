@@ -79,7 +79,10 @@ func getUserInfo4() -> (name: String, isPremium: Bool, isNew: Bool) {
 }
 
 func doSomethingWithUserInfo(info: (name: String, isPremium: Bool, isNew: Bool)) {
-
+    // inside this use info.name, info.isPremium, info.isNew to access the values
+    // info.firstName
+    // info.premium
+    // info.newUser
 }
 
 let info = getUserInfo4()
