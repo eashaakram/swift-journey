@@ -35,6 +35,16 @@ import Foundation
  // Functions
  // NEW: Class, Actors
 
+ // iPhone is a "multi-threaded environment"
+ // There are multiple "threads" or "engines" running simultaneously
+ // Each thread has a Stack 
+ // But there is only 1 Heap for all threads
+
+
+ // Therefore:
+ // Stack is faster, lower memory footprint, preferable
+ // Heap is slower, higher memory footprint
+ // 
 
 
 
