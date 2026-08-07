@@ -22,5 +22,20 @@ import Foundation
  // For example, if an app has 2 screens and user is moving from screen 1 to screen 2. We only want to allocate screen 2 WHEN we need it (ie. when the user clicks a button to segue to screen 2). When we get to screen 2, we may want to deallocate screen 1.
 
 
+ // There are two types of Memory
+ // Stack & Heap
+ // Only objects in the Heap are counted towards ARC
+
+
+ // Objects in the Stack
+ // String, Bool, Int, most basic types 
+ // NEW: Struct, Enum
+
+ // Objects in the Heap
+ // Functions
+ // NEW: Class, Actors
+
+
+
 
 */
