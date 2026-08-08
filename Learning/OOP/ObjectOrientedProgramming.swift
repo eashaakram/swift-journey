@@ -43,7 +43,7 @@ import Foundation
 
  // Therefore:
  // Stack is faster, lower memory footprint, preferable
- // Heap is slower, higher memory footprint
+ // Heap is slower, higher memory footprint, risk of threading issues
  
 
 
@@ -54,7 +54,7 @@ import Foundation
 
  // Objects in the Heap are "Reference" types.
  // When you edit a Refernce type, you edit the object that you are referencing. This "reference" is called "pointer" because it "points" to an object in the Heap (in memory).
- 
+
 
 
 */
