@@ -44,8 +44,17 @@ import Foundation
  // Therefore:
  // Stack is faster, lower memory footprint, preferable
  // Heap is slower, higher memory footprint
- // 
+ 
 
+
+ // Value vs Reference types
+
+ // Objects in the Stack are "Value" types.
+ // When you create a Value type, you create a copy of it with new data.
+
+ // Objects in the Heap are "Reference" types.
+ // When you edit a Refernce type, you edit the object that you are referencing. This "reference" is called "pointer" because it "points" to an object in the Heap (in memory).
+ 
 
 
 */
