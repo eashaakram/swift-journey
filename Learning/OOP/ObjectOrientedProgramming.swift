@@ -85,4 +85,12 @@ class MySecondObject {
 
 // Note:
 // This metaphor is NOT perfect :)
- // Technical a "quiz" can be a class, etc.
+// Technical a "quiz" can be a class, etc.
+
+// We want to use a class for things like:
+// "Manager" "DataService" "Service" "Factory" "ViewModel"
+// Objects taht we create and want to perform actions inside.
+
+// We want to use a struct for things like:
+// Data models
+// Objects we create and pass around our app.
