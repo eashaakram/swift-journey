@@ -9,6 +9,12 @@ import Foundation
 struct Quiz {
     let title: String 
     let dateCreated: Date
+
+    // Structs have an implicit init
+    init(title: String, dateCreated: Date) {
+        self.title = title
+        self.dateCreated = dateCreated
+    }
 }
 
 let myObject: String = "Hello, world!"
