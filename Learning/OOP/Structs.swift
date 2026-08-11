@@ -88,3 +88,22 @@ func markUserAsPremium2() {
 }
 
 markUserAsPremium2()
+
+// -----------------------------------------------------------------
+
+// immutable struct 
+struct UserModel3 {
+    let name: String 
+    let isPremium: Bool 
+
+    func makeUserAsPremium(newValue: Bool) -> UserModel3 {
+        UserModel3(name: name, isPremium: newValue)
+    }
+}
+
+var user3: UserModel3 = UserModel3(name: "Easha", isPremium: false)
+user3 = user3.makeUserAsPremium(newValue: true)
+
+
+// -----------------------------------------------------------------
+
