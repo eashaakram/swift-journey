@@ -45,3 +45,25 @@ let myQuiz: Quiz = Quiz(title: "Quiz 1", dateCreated: nil , isPremium: false)
 print(myQuiz.title)
 print(myQuiz.dateCreated)
 print(myQuiz.isPremium)
+
+
+// -----------------------------------------------------------------
+
+
+// Immutable struct = all "let" constants = NOT mutable = "cannot mutate it!"
+struct UserModel {
+    let name: String 
+    let isPremium: Bool
+}
+
+var user1: UserModel = UserModel(name: "Easha", isPremium: false)
+
+func markUserAsPremium() {
+    print(user1)
+    user1 = UserModel(name: user1.name, isPremium: true)
+    print(user1)
+}
+
+markUserAsPremium()
+
+// How to mutate the struct
