@@ -66,4 +66,25 @@ func markUserAsPremium() {
 
 markUserAsPremium()
 
+
+// -----------------------------------------------------------------
+
+
 // How to mutate the struct
+// Mutable Struct
+
+struct UserModel2 {
+    let name: String 
+    var isPremium: Bool
+}
+var user2 = UserModel2(name: "Easha", isPremium: false) 
+
+func markUserAsPremium2() {
+    print(user2)
+
+    // mutate the struct
+    user2.isPremium = true
+    print(user2)
+}
+
+markUserAsPremium2()
