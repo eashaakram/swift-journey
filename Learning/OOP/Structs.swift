@@ -102,8 +102,8 @@ struct UserModel3 {
     }
 }
 
-var user3: UserModel3 = UserModel3(name: "Easha", isPremium: false)
-user3 = user3.makeUserAsPremium(newValue: true)
+var user3: UserModel3 = UserModel3(name: "Easha", isPremium: false) // create an object
+user3 = user3.makeUserAsPremium(newValue: true) // create new usermodel here
 
 
 // -----------------------------------------------------------------
@@ -112,6 +112,7 @@ user3 = user3.makeUserAsPremium(newValue: true)
 // mutable struct
 
 struct UserModel4 {
+    // property
     let name: String 
     private(set) var isPremium: Bool
 //     PRIVATE SET
@@ -121,7 +122,7 @@ struct UserModel4 {
 // Lekin:
 // READ → allowed (yani bahir sa print krwana ka option set ki wjah sa allow ha agr khali private hota toh bahir sa print b allow ni hota)
 // SET  → outside se not allowed
-
+    // method/action
     mutating func markUserAsPremium() {
         isPremium = true
     }
@@ -134,3 +135,10 @@ struct UserModel4 {
 var user4 = UserModel4(name: "Easha", isPremium: false)
 user4.markUserAsPremium()
 user4.updateIsPremium(newValue: true)
+
+// I can't change isPremium outside the struct
+// user4.isPremium = true (not possible)
+
+// I can print or get the value but can't set/change the value
+let newValue = user4.isPremium
+print(newValue)
