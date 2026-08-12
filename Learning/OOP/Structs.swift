@@ -92,6 +92,7 @@ markUserAsPremium2()
 // -----------------------------------------------------------------
 
 // immutable struct 
+// better coding practice
 struct UserModel3 {
     let name: String 
     let isPremium: Bool 
@@ -107,3 +108,29 @@ user3 = user3.makeUserAsPremium(newValue: true)
 
 // -----------------------------------------------------------------
 
+
+// mutable struct
+
+struct UserModel4 {
+    let name: String 
+    private(set) var isPremium: Bool
+//     PRIVATE SET
+//      ↓
+// "SET/change karne ka right private hai."
+
+// Lekin:
+// READ → allowed (yani bahir sa print krwana ka option set ki wjah sa allow ha agr khali private hota toh bahir sa print b allow ni hota)
+// SET  → outside se not allowed
+
+    mutating func markUserAsPremium() {
+        isPremium = true
+    }
+
+    mutating func updateIsPremium(newValue: Bool) {
+        isPremium = newValue
+    }
+}
+
+var user4 = UserModel4(name: "Easha", isPremium: false)
+user4.markUserAsPremium()
+user4.updateIsPremium(newValue: true)
