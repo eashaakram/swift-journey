@@ -22,6 +22,16 @@ struct CarBrand {
 // Also write like this
 enum CarBrandOption {
     case ford, toyota, honda
+
+    var title: String {
+        if self == .ford {
+            return "Ford"
+        } else if self == .toyota {
+            return "Honda"
+        } else {
+            return "Default value"
+        }
+    }
 }
 
 // var car1: CarModel = CarModel(brand: "Ford", model: "Fiesta")
