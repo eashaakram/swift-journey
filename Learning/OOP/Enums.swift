@@ -3,12 +3,25 @@ import Foundation
 // Enum is the same as Struct except we know all cases at runtime
 
 struct CarModel {
-    let brand: CarBrand
+    let brand: CarBrandOption
     let model: String
 }
 
 struct CarBrand {
     let title: String
+}
+
+// // Enums are stored in memory the same way as a Struct but we cannot mutate them
+
+// enum CarBrandOption {
+//     case ford
+//     case toyota
+//     case honda
+// }
+
+// Also write like this
+enum CarBrandOption {
+    case ford, toyota, honda
 }
 
 // var car1: CarModel = CarModel(brand: "Ford", model: "Fiesta")
@@ -20,9 +33,13 @@ struct CarBrand {
 // var car3: CarModel = CarModel(brand: CarBrand(title: "Toyota"), model: "Camry")
 
 
-var brand1 = CarBrand(title: "Ford")
-var brand2 = CarBrand(title: "Toyota")
+// var brand1 = CarBrand(title: "Ford")
+// var brand2 = CarBrand(title: "Toyota")
 
-var car1: CarModel = CarModel(brand: brand1, model: "Fiesta")
-var car2: CarModel = CarModel(brand: brand1, model: "Focus")
-var car3: CarModel = CarModel(brand: brand2, model: "Camry")
+// var car1: CarModel = CarModel(brand: brand1, model: "Fiesta")
+// var car2: CarModel = CarModel(brand: brand1, model: "Focus")
+// var car3: CarModel = CarModel(brand: brand2, model: "Camry")
+
+var car1 = CarModel(brand: .ford, model: "Fiesta")
+var car1 = CarModel(brand: .ford, model: "Focus")
+var car1 = CarModel(brand: .toyota, model: "Camry")
