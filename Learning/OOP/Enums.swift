@@ -24,13 +24,25 @@ enum CarBrandOption {
     case ford, toyota, honda
 
     var title: String {
-        if self == .ford {
+        switch self {
+        case .ford:
             return "Ford"
-        } else if self == .toyota {
-            return "Honda"
-        } else {
-            return "Default value"
+        case .toyota:
+            return "Toyota"
+        // case .honda:   
+        //     return "Honda"  
+        default: 
+        return "Default"
         }
+
+
+        // if self == .ford {
+        //     return "Ford"
+        // } else if self == .toyota {
+        //     return "Honda"
+        // } else {
+        //     return "Default value"
+        // }
     }
 }
 
@@ -51,5 +63,5 @@ enum CarBrandOption {
 // var car3: CarModel = CarModel(brand: brand2, model: "Camry")
 
 var car1 = CarModel(brand: .ford, model: "Fiesta")
-var car1 = CarModel(brand: .ford, model: "Focus")
-var car1 = CarModel(brand: .toyota, model: "Camry")
+var car2 = CarModel(brand: .ford, model: "Focus")
+var car3 = CarModel(brand: .toyota, model: "Camry")
