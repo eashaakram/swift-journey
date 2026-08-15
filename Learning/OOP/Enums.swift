@@ -32,9 +32,12 @@ enum CarBrandOption {
         case .toyota:
             return "Toyota"
         // case .honda:   
-        //     return "Honda"  
+        //     return "Honda" 
+
+        // But if you don't want to explicitly handle .honda, you can use: 
         default: 
         return "Default"
+        // default doesn't mean "ignore the missing case." It means "for any case that wasn't matched above, do this.
         }
 
 
