@@ -23,6 +23,8 @@ struct CarBrand {
 enum CarBrandOption {
     case ford, toyota, honda
     // faida ya ha ka agr hum koi case miss kr deta hn toh ya error da ga ka sara use kro agr hum sara use na krna chaha toh default case da skta issay error ni ayega 
+    
+    // property
     var title: String {
         switch self {
         case .ford:
@@ -45,6 +47,9 @@ enum CarBrandOption {
         // }
     }
 }
+
+let brand = CarBrandOption.ford
+print(brand.title)
 
 // var car1: CarModel = CarModel(brand: "Ford", model: "Fiesta")
 // var car1: CarModel = CarModel(brand: "Ford", model: "Focus")
