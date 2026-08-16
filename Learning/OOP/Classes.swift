@@ -19,6 +19,13 @@ class ScreenViewModel {
         self.title = title
         self.showButton = showButton
     }
+
+    // One difference in Classes and Structs, Classes have deinit
+    deinit {
+        // runs as the object is being removed from memory
+        // Structs do NOT have deinit!
+    }
+
 }
 
 /*
