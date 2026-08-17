@@ -4,10 +4,14 @@ import Foundation
 struct MovieModel {
     let title: String
     let genre: MovieGenre
-    let isFavourite: Bool
+    private(set) var isFavourite: Bool
 
-    func updateFavouriteStatus(newValue: Bool){
+    func updateFavoriteStatus(newValue: Bool) -> MovieModel {
         MovieModel(title: title, genre: genre, isFavourite: newValue)
+    }
+
+    mutating func updateFavoriteStatus2(newValue: Bool) {
+        isFavourite = newValue
     }
 }
 
@@ -26,5 +30,6 @@ class MovieManager {
 }
 
 let manager = MovieManager()
-manager.movie1 = manager.movie1.updateFavouriteStatus(newValue: true)
+// manager.movie1 = manager.movie1.updateFavouriteStatus(newValue: true)
+manager.movie1.updateFavoriteStatus2(newValue: true)
 print(manager.movie1)
