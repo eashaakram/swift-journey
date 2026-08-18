@@ -1,5 +1,11 @@
 import Foundation
 
+// Rule of thumb: 
+// We want everything to be as private as possible!
+// This makes your code easier to read/debug
+
+
+
 // blueprint
 struct MovieModel {
     let title: String
@@ -40,20 +46,38 @@ class MovieManager {
 
 let manager = MovieManager()
 
-// getting the value from movie1
-let someValue = manager.movie1
+// Version 1
+// We can GET and SET the value of movie1 from outside the object.
+// "too public"
+let movie1 = manager.movie1
 
 // below updating the value of movie1 (setting )
 // manager.movie1 = manager.movie1.updateFavouriteStatus(newValue: true)
 manager.movie1.updateFavoriteStatus2(newValue: true)
 print(manager.movie1)
 
+
+// Version 2
+// We can't GET and SET the value from outside the object.
+// "cannot access"
 // - error: 'movie2' is inaccessible due to 'private' protection level
-// let someValue2 = manager.movie2
+// let movie2 = manager.movie2
 // manager.movie1.updateFavoriteStatus2(newValue: true)
 
+
+// Version 3
+// We can GET the value from outside the object, but we can't SET the value from outside the object.
 // I can read movie3 and cannot update it
-let someValue3 = manager.movie3
-// manager.movie1.updateFavoriteStatus3(newValue: true)
+// "best practice"
+let movie3 = manager.movie3
+// manager.movie3 = manager.movie3.updateFavoriteStatus(newValue: true) ("Because we can't SET from outside the object.")
 manager.updateMovie3(isFavorite: true)
 print(manager.movie3)
+
+// Note: private & public are by far the most common but there are many others 
+// The others are:-
+// open 
+// public
+// internal
+// fileprivate
+// private
