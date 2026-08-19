@@ -98,7 +98,12 @@ let fruits2: [String] = [apple, orange]
 let fruits3: Array<String> = [apple, orange]
 
 
+let myBools: [Bool] = [true, false, true, true, true, false]
+
+
 // Here I can pass bunch of Strings as one single collection
 func doSomething(value: [String]) {
 
 }
+
+
