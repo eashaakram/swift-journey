@@ -106,4 +106,8 @@ func doSomething(value: [String]) {
 
 }
 
+// count
 
+let fruitsArray: [String] = ["Apple", "Orange", "Banana", "Mango"]
+
+let count = fruitsArray.count
