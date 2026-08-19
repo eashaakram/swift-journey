@@ -1,3 +1,5 @@
+import Foundation
+
 // Array Declare
 var myarr = [String]() // alloc init
 myarr = ["yy", "zz", "aa"]
