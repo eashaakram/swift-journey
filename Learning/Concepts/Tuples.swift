@@ -106,8 +106,32 @@ func doSomething(value: [String]) {
 
 }
 
-// count
 
+// count
 let fruitsArray: [String] = ["Apple", "Orange", "Banana", "Mango"]
 
 let count = fruitsArray.count
+print("Number of values in Array: \(count)")
+
+
+// First and last
+let firstItem = fruitsArray.first
+
+/*String?
+The first element of the collection.
+If the collection is empty, the value of this property is nil.
+let numbers = [10, 20, 30, 40, 50]
+if let firstNumber = numbers.first {
+    print(firstNumber)
+}
+// Prints "10"
+*/
+
+let lastItem = fruitsArray.last
+
+if let firstItem = fruitsArray.first {
+    print("First Item in array: \(firstItem)")
+}
+
+print("Last Item in array: \(lastItem)")
+
