@@ -1,137 +1,87 @@
-import Foundation
+/* Tuples are not collection but simply multiple variables that can be 
+that can be passed around with a single identifier*/
+let fullName = ("Easha", "Akram")
+print("Accessing all values by single variable: \(fullName)") 
+//It can be accessde manually by index
+print("Accessing first value by index: \(fullName.0)")
+print("Accessing second value by index: \(fullName.1)")
 
-// /* Tuples are not collection but simply multiple variables that can be 
-// that can be passed around with a single identifier*/
-// let fullName = ("Easha", "Akram")
-// print("Accessing all values by single variable: \(fullName)") 
-// //It can be accessde manually by index
-// print("Accessing first value by index: \(fullName.0)")
-// print("Accessing second value by index: \(fullName.1)")
+// Tuples can be deconstructed in to new variable names
+let (first, last) = ("Easha", "Akram")
+print("First name: \(first)")
 
-// // Tuples can be deconstructed in to new variable names
-// let (first, last) = ("Easha", "Akram")
-// print("First name: \(first)")
+// If you want to ignore a value, you can use an underscore (_) instead of a variable name
+let (first1, _) = ("Easha", "Akram") 
+print("First name (ignore second by using underscore): \(first1)")
 
-// // If you want to ignore a value, you can use an underscore (_) instead of a variable name
-// let (first1, _) = ("Easha", "Akram") 
-// print("First name (ignore second by using underscore): \(first1)")
-
-// let (f1, _, f3) = ("Easha", "Akram", "Uzma")
-// print("First name: \(f1)"); print("Third name: \(f3)")
+let (f1, _, f3) = ("Easha", "Akram", "Uzma")
+print("First name: \(f1)"); print("Third name: \(f3)")
 
 
-// // Tuple with Function
-// // A function can return multiple values by using a tuple as the return type
+// Tuple with Function
+// A function can return multiple values by using a tuple as the return type
 
-// var userName: String = "Hello"
-// var userIsPremium: Bool = false
-// var userIsNew: Bool = true
+var userName: String = "Hello"
+var userIsPremium: Bool = false
+var userIsNew: Bool = true
 
-// func getUserName() -> String {
-//     userName
-// }
+func getUserName() -> String {
+    userName
+}
 
-// func getUserIsPremium() -> Bool {
-//     userIsPremium
-// }
-
-
-// // limited to 1 return typle
-// func getUserInfo() -> String {
-//     let name = getUserName()
-//     let isPremium = getUserIsPremium()
-
-//     // do something
-//     return name
-// }
-
-
-// // Tuples can combine multiple pieces of data
-// func getUserInfo2() -> (String, Bool) {
-//     let name = getUserName()
-//     let isPremium = getUserIsPremium()
-
-//     return(name, isPremium)
-// }
-
-
-// var userData: String = userName
-// var userData2: (String, Bool, Bool) = (userName, userIsPremium, userIsNew)
-
-// let info1 = getUserInfo2()
-// let name1 = info1.0
-// // let name = userData2.2
-
-
-// // Adding parameters names
-// func getUserInfo3() -> (name: String, isPremium: Bool) {
-//     let name = getUserName()
-//     let isPremium = getUserIsPremium()
-
-//     return(name, isPremium)
-// }
-
-// let info2 = getUserInfo3()
-// let name2 = info2.isPremium
-
-// func getUserInfo4() -> (name: String, isPremium: Bool, isNew: Bool) {
-//     return (userName, userIsPremium, userIsNew)
-// }
-
-// func doSomethingWithUserInfo(info: (name: String, isPremium: Bool, isNew: Bool)) {
-//     // inside this use info.name, info.isPremium, info.isNew to access the values
-//     // info.firstName
-//     // info.premium
-//     // info.newUser
-// }
-
-// let info = getUserInfo4()
-// doSomethingWithUserInfo(info: info)
-
-let apple: String = "Apple"
-let orange: String = "Orange"
-
-let fruits1: [String] = ["Apple", "Orange"]
-// Another way to write this 
-let fruits2: [String] = [apple, orange]
-// Advance swift method (generic)
-let fruits3: Array<String> = [apple, orange]
-
-
-let myBools: [Bool] = [true, false, true, true, true, false]
-
-
-// Here I can pass bunch of Strings as one single collection
-func doSomething(value: [String]) {
-
+func getUserIsPremium() -> Bool {
+    userIsPremium
 }
 
 
-// count
-let fruitsArray: [String] = ["Apple", "Orange", "Banana", "Mango"]
+// limited to 1 return typle
+func getUserInfo() -> String {
+    let name = getUserName()
+    let isPremium = getUserIsPremium()
 
-let count = fruitsArray.count
-print("Number of values in Array: \(count)")
-
-
-// First and last
-let firstItem = fruitsArray.first
-
-/*String?
-The first element of the collection.
-If the collection is empty, the value of this property is nil.
-let numbers = [10, 20, 30, 40, 50]
-if let firstNumber = numbers.first {
-    print(firstNumber)
-}
-// Prints "10"
-*/
-
-let lastItem = fruitsArray.last
-
-if let firstItem = fruitsArray.first {
-    print("First Item in array: \(firstItem)")
+    // do something
+    return name
 }
 
-print("Last Item in array: \(lastItem)")
 
+// Tuples can combine multiple pieces of data
+func getUserInfo2() -> (String, Bool) {
+    let name = getUserName()
+    let isPremium = getUserIsPremium()
+
+    return(name, isPremium)
+}
+
+
+var userData: String = userName
+var userData2: (String, Bool, Bool) = (userName, userIsPremium, userIsNew)
+
+let info1 = getUserInfo2()
+let name1 = info1.0
+// let name = userData2.2
+
+
+// Adding parameters names
+func getUserInfo3() -> (name: String, isPremium: Bool) {
+    let name = getUserName()
+    let isPremium = getUserIsPremium()
+
+    return(name, isPremium)
+}
+
+let info2 = getUserInfo3()
+let name2 = info2.isPremium
+
+func getUserInfo4() -> (name: String, isPremium: Bool, isNew: Bool) {
+    return (userName, userIsPremium, userIsNew)
+}
+
+func doSomethingWithUserInfo(info: (name: String, isPremium: Bool, isNew: Bool)) {
+    // inside this use info.name, info.isPremium, info.isNew to access the values
+    // info.firstName
+    // info.premium
+    // info.newUser
+}
+
+let info = getUserInfo4()
+doSomethingWithUserInfo(info: info)
