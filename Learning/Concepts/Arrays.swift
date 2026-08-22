@@ -60,18 +60,10 @@ let fruits2: [String] = [apple, orange]
 // Advance swift method (generic)
 let fruits3: Array<String> = [apple, orange]
 
-// pass value that would be whole bunch of strings
-func doSomething(value: [String]) {
-
-}
-
-
-
-
 
 let myBools: [Bool] = [true, false, true, true, true, false]
 
-
+// pass value that would be whole bunch of strings
 // Here I can pass bunch of Strings as one single collection
 func doSomething(value: [String]) {
 
@@ -79,7 +71,8 @@ func doSomething(value: [String]) {
 
 
 // count
-let fruitsArray: [String] = ["Apple", "Orange", "Banana", "Mango"]
+var fruitsArray: [String] = ["Apple", "Orange"]
+print("Fruits Array: \(fruitsArray)")
 
 let count = fruitsArray.count
 print("Number of values in Array: \(count)")
@@ -106,3 +99,5 @@ if let firstItem = fruitsArray.first {
 
 print("Last Item in array: \(lastItem)")
 
+fruitsArray = fruitsArray + ["Banana", "Mango"]
+print("Fruits Array Updated: \(fruitsArray)")

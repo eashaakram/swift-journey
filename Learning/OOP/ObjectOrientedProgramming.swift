@@ -29,7 +29,7 @@ import Foundation
 
  // Objects in the Stack
  // String, Bool, Int, most basic types 
- // NEW: Struct, Enum
+ // NEW: Struct, Enum , Array
 
  // Objects in the Heap
  // Functions
