@@ -99,5 +99,17 @@ if let firstItem = fruitsArray.first {
 
 print("Last Item in array: \(lastItem)")
 
-fruitsArray = fruitsArray + ["Banana", "Mango"]
+
+// // This is not general way to add items in array
+// fruitsArray = fruitsArray + ["Banana", "Mango"]
+// print("Fruits Array Updated: \(fruitsArray)")
+
+// Special methods to add data in array
+
+fruitsArray.append("Banana")
+fruitsArray.append("Mango")
+
+// If we want to append both together (means more than one data)
+fruitsArray.append(contentsOf: "Grapes", "Strawberry")
+
 print("Fruits Array Updated: \(fruitsArray)")
