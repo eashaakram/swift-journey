@@ -110,6 +110,22 @@ fruitsArray.append("Banana")
 fruitsArray.append("Mango")
 
 // If we want to append both together (means more than one data)
-fruitsArray.append(contentsOf: "Grapes", "Strawberry")
+fruitsArray.append(contentsOf: ["Grapes", "Strawberry"])
 
 print("Fruits Array Updated: \(fruitsArray)")
+
+// Subscript
+// Count = 1, 2, 3, 4
+// Indexes = 0, 1, 2, 3
+
+// Accessing items at an index
+print("Accessing item at index 2:",fruitsArray[2])
+
+// But what about if we try to access any index that didn't exist
+// Safe accessing item at an index method 
+if fruitsArray.indices.contains(4) {
+    let item = fruitsArray[4]
+}
+
+let firstIndex = fruitsArray.indices.first
+let lastIndex = fruitsArray.indices.last
