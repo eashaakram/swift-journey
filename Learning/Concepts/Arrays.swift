@@ -155,3 +155,21 @@ if fruitsArray.indices.contains(1) {
 fruitsArray.removeAll()
 
 print("Fruits Array updated 4(remove): \(fruitsArray)")
+
+
+// Array with Custom Types
+
+struct ProductModel {
+    let title: String
+    let price: Int
+}
+
+// Here ProductModel is array
+
+// In bw the items of array we need to add coma to separate it
+var myProducts = [
+    ProductModel(title: "Product 1", price: 50),
+    ProductModel(title: "Product 2", price: 2),
+    ProductModel(title: "Product 3", price: 54),
+    ProductModel(title: "Product 4", price: 7),
+    ]
