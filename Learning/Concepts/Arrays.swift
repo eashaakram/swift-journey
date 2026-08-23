@@ -134,6 +134,9 @@ let firstIndex = fruitsArray.indices.first
 let lastIndex = fruitsArray.indices.last
 
 
+
+// Insert
+
 fruitsArray.append("Watermelon")
 
 // insert watermelon in between orange and banana
@@ -142,3 +145,13 @@ fruitsArray.insert("Watermelon", at: 2)
 fruitsArray.insert(contentsOf: ["Avocado", "Tangerine"], at: 2)
 
 print("Fruits Array updated 3(insert): \(fruitsArray)")
+
+
+// Remove
+if fruitsArray.indices.contains(1) {
+    fruitsArray.remove(at: 3)
+}
+
+fruitsArray.removeAll()
+
+print("Fruits Array updated 4(remove): \(fruitsArray)")
