@@ -167,9 +167,19 @@ struct ProductModel {
 // Here ProductModel is array
 
 // In bw the items of array we need to add coma to separate it
-var myProducts = [
+var myProducts: [ProductModel] = [
     ProductModel(title: "Product 1", price: 50),
     ProductModel(title: "Product 2", price: 2),
     ProductModel(title: "Product 3", price: 54),
     ProductModel(title: "Product 4", price: 7),
     ]
+
+
+// Difference between Array and Set
+
+var finalFruitsList: [String] = ["Apple", "Orange", "Banana", "Apple"]
+print("Array: \(finalFruitsList)")
+
+
+var finalFruitsSet: Set<String> = ["Apple", "Orange", "Banana", "Apple"]
+print("Set: \(finalFruitsSet)")
