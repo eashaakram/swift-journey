@@ -121,6 +121,9 @@ print("Fruits Array Updated: \(fruitsArray)")
 // Accessing items at an index
 print("Accessing item at index 2:",fruitsArray[2])
 
+// We can access an array index directly when we are sure that there is a value at that index 
+fruitsArray[0]
+
 // But what about if we try to access any index that didn't exist
 // Safe accessing item at an index method 
 if fruitsArray.indices.contains(4) {
@@ -129,3 +132,13 @@ if fruitsArray.indices.contains(4) {
 
 let firstIndex = fruitsArray.indices.first
 let lastIndex = fruitsArray.indices.last
+
+
+fruitsArray.append("Watermelon")
+
+// insert watermelon in between orange and banana
+fruitsArray.insert("Watermelon", at: 2)
+// insert an array
+fruitsArray.insert(contentsOf: ["Avocado", "Tangerine"], at: 2)
+
+print("Fruits Array updated 3(insert): \(fruitsArray)")
