@@ -180,6 +180,6 @@ var myProducts: [ProductModel] = [
 var finalFruitsList: [String] = ["Apple", "Orange", "Banana", "Apple"]
 print("Array: \(finalFruitsList)")
 
-
+// Sets do not have order
 var finalFruitsSet: Set<String> = ["Apple", "Orange", "Banana", "Apple"]
 print("Set: \(finalFruitsSet)")
