@@ -41,3 +41,21 @@ var anotherDictionary2: [String : String] = [
 ]
 let item3 = anotherDictionary2["abc"]
 print(item3)
+
+// Adding items in dictionary
+
+var anotherDictionary3: [String : String] = [
+    "abc" : "Apple",
+    "def" : "Banana"
+]
+
+anotherDictionary3["xyz"] = "Mango"
+
+print("ADD: \(anotherDictionary3)")
+
+// Remove item from dictionary
+anotherDictionary3.removeValue(forKey: "def")
+
+print("REMOVE: \(anotherDictionary3)")
+
+
