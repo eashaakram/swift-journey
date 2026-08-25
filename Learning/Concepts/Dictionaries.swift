@@ -1,3 +1,5 @@
+import Foundation
+
 // Key and Values
 let ages = ["Easha" : 20, "Akram" : 50]
 print(ages)
@@ -11,3 +13,7 @@ print(arrayages) // It will print optional value
 if let arrayages = ages["Easha"] { // It will store unwrapped value
     print("Unwrap: \(arrayages)") // It will print unwrapped value
 } //because if let automatically unwrap 
+
+// Dictionaries keys are unique 
+
+var myFirstDictionary: [String : Bool] = ["Apple" : true, "Orange" : false]
