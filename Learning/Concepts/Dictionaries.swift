@@ -59,3 +59,30 @@ anotherDictionary3.removeValue(forKey: "def")
 print("REMOVE: \(anotherDictionary3)")
 
 
+struct PostModel {
+    let id: String
+    let title: String
+    let likeCount: Int
+}
+
+var postArray: [PostModel] = [
+    PostModel(id: "abc123", title: "Post 1", likeCount: 5),
+    PostModel(id: "def123", title: "Post 2", likeCount: 7),
+    PostModel(id: "xyz123", title: "Post 3", likeCount: 217)
+]
+
+// check
+if postArray.indices.contains(1) {
+    let item = postArray[1]
+    print(item)
+}
+
+// Custom Dict
+var postDict: [String:PostModel] = [
+    "abc123" : PostModel(id: "abc123", title: "Post 1", likeCount: 5),
+    "def123" : PostModel(id: "def123", title: "Post 2", likeCount: 7),
+    "xyz123" : PostModel(id: "xyz123", title: "Post 3", likeCount: 217)
+]
+ 
+let myNewItem = postDict["def123"]
+print(myNewItem)
