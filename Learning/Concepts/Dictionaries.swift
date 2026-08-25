@@ -24,3 +24,20 @@ var myFirstDictionary: [String : Bool] = [
 
 // Dictionaries are not stored in order so there is no any index
 let item = myFirstDictionary["Orange"]
+
+var anotherDictionary: [Int : String] = [
+    0 : "Apple",
+    176 : "Banana"
+]
+let item2 = anotherDictionary[86]
+print(item2)
+
+
+var anotherDictionary2: [String : String] = [
+    "abc" : "Apple",
+    "def" : "Banana",
+    "xyz" : "Apple"
+    // "abc" : "Mango" // Dictionary keys must be unique
+]
+let item3 = anotherDictionary2["abc"]
+print(item3)
