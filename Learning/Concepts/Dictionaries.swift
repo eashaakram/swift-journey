@@ -16,4 +16,11 @@ if let arrayages = ages["Easha"] { // It will store unwrapped value
 
 // Dictionaries keys are unique 
 
-var myFirstDictionary: [String : Bool] = ["Apple" : true, "Orange" : false]
+var myFirstDictionary: [String : Bool] = [
+    "Apple" : true,
+    "Orange" : false
+    ]
+
+
+// Dictionaries are not stored in order so there is no any index
+let item = myFirstDictionary["Orange"]
