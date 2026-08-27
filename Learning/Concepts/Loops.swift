@@ -63,6 +63,39 @@ for item in 0..<100 {
 
 let myArray = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon"]
 
+var secondArray: [String] = []
+
 for item in myArray {
     print(item)
+
+    if item == "Gamma" {
+        // call (add data in secondArray)
+        secondArray.append(item)
+    }
 }
+
+print(secondArray)
+
+struct LessonModel {
+    let title: String
+    let isFavorite: Bool
+}
+
+// Array
+let allLessons = [
+    LessonModel(title: "Lesson 1", isFavorite: true),
+    LessonModel(title: "Lesson 2", isFavorite: false),
+    LessonModel(title: "Lesson 3", isFavorite: false),
+    LessonModel(title: "Lesson 4", isFavorite: true)
+]
+
+// array changeable: var and its empty
+var favoriteLessons: [LessonModel] = []
+
+for lesson in allLessons {
+    if lesson.isFavorite {
+        favoriteLessons.append(lesson)
+    }
+}
+
+print(favoriteLessons)
