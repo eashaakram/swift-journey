@@ -1,3 +1,5 @@
+import Foundation
+
 // Loops & collections
 let names = ["Easha", "Akram", "Uzma", "Asfand"]
 print("Names: ")
@@ -53,3 +55,8 @@ for i in 1...5 {
     print(i, terminator: " ")
 }
 print()
+
+// 0 to 99
+for item in 0..<100 {
+    print(item)
+}
