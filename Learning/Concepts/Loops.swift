@@ -99,3 +99,10 @@ for lesson in allLessons {
 }
 
 print(favoriteLessons)
+
+
+
+// enumerated (index, item in loop)
+for (index, lesson) in allLessons.enumerated() {
+    print("Index: \(index) || Lesson: \(lesson)")
+}
