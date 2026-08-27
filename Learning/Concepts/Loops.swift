@@ -104,5 +104,12 @@ print(favoriteLessons)
 
 // enumerated (index, item in loop)
 for (index, lesson) in allLessons.enumerated() {
+   
+   // Control flow
+   if index == 1 {
+    // break // opposite of break is continue
+    continue // means(skip) stop this current loop and continue the next loop
+   }
+
     print("Index: \(index) || Lesson: \(lesson)")
 }
