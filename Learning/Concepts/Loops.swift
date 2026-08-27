@@ -56,7 +56,13 @@ for i in 1...5 {
 }
 print()
 
-// 0 to 99
+// 0 to 99 (..< less than 100)
 for item in 0..<100 {
+    print(item)
+}
+
+let myArray = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon"]
+
+for item in myArray {
     print(item)
 }
