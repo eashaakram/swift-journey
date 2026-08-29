@@ -112,4 +112,4 @@ for (index, lesson) in allLessons.enumerated() {
    }
 
     print("Index: \(index) || Lesson: \(lesson)")
-}
+}  
