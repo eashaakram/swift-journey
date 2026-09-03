@@ -25,6 +25,7 @@ var allUsers: [DatabaseUser] = [
 // }
 
 var allPremiumUsers: [DatabaseUser] = allUsers.filter { user in
+    // if we return one thing then no need to write return   
     user.isPremium
 }
 
@@ -40,3 +41,15 @@ var allPremiumUsers2: [DatabaseUser] = allUsers.filter({ $0.isPremium })
 // }
 print((allPremiumUsers))
 print("2: \(allPremiumUsers2)")
+
+
+
+// Sorted
+var orderedUsers: [DatabaseUser] = allUsers.sorted { user1, user2 in
+    user1.order < user2.order
+}
+print("Ordered Users: \(orderedUsers)")
+
+// Short way to write (same as above)
+var orderedUsers2: [DatabaseUser] = allUsers.sorted({ $0.order < $1.order })
+print("Ordered Users 2: \(orderedUsers2)")
