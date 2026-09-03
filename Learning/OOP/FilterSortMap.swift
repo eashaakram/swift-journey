@@ -53,3 +53,14 @@ print("Ordered Users: \(orderedUsers)")
 // Short way to write (same as above)
 var orderedUsers2: [DatabaseUser] = allUsers.sorted({ $0.order < $1.order })
 print("Ordered Users 2: \(orderedUsers2)")
+
+
+// Mapping
+var userNames: [String] = allUsers.map { user in
+    user.name
+}
+print("User Names: \(userNames)")
+
+// Short way to write (same as above)
+var userNames2: [String] = allUsers.map({ $0.name })
+print("User Names 2: \(userNames2)")
