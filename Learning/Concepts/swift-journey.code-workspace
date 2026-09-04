@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "Python-2025-Journey",
+			"path": "../../../Python-2025-Journey"
+		}
+	],
+	"settings": {},
+	"launch": {
+		"configurations": [
+			{
+				"type": "swift",
+				"request": "launch",
+				"args": [],
+				"cwd": "${workspaceFolder:swift-journey}",
+				"name": "Debug Swift_journey (swift-journey)",
+				"target": "Swift_journey",
+				"configuration": "debug",
+				"preLaunchTask": "swift: Build Debug Swift_journey (swift-journey)"
+			},
+			{
+				"type": "swift",
+				"request": "launch",
+				"args": [],
+				"cwd": "${workspaceFolder:swift-journey}",
+				"name": "Release Swift_journey (swift-journey)",
+				"target": "Swift_journey",
+				"configuration": "release",
+				"preLaunchTask": "swift: Build Release Swift_journey (swift-journey)"
+			}
+		]
+	}
+}
